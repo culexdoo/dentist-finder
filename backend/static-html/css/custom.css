@@ -1,0 +1,9 @@
+.footer-main{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    background: white;
+    opacity: 1;
+    border: 1px white solid;
+}
