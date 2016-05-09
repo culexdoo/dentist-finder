@@ -259,7 +259,7 @@
 
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="pacients.html">
+                            <a href="patients.html">
                                 <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
                             </a>
                         </li>
@@ -271,7 +271,7 @@
 
                         <li>
                             <a href="services.html">
-                                <i class="fa fa-star"></i> <span>Pregled svih usluga</span>
+                                <i class="fa fa-asterisk"></i> <span>Informacije o uslugama</span>
                             </a>
                         </li>
 
@@ -296,13 +296,128 @@
             <aside class="right-side">
 
                 <!-- Main content -->
-                <section class="content"> 
+                              
+                <div class="col-md-12">
+
+                            <section class="panel">
+                              <header class="panel-heading">
+                                  Upiti pacijenata
+                            </header>
+                            <div class="panel-body table-responsive">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>Id</th>
+                                      <th>Ime</th>
+                                      <th>Prezime</th>
+                                      <th>Email</th>
+                                      <th>Usluge</th>
+                                      <th>Doktor</th>
+                                      <th>Akcije</th>
+                                  </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Dino</td>
+                                  <td>Belegić</td>
+                                  <td>testmail@gmail.com</td>
+                                  <td>Brušenje zubi</td>
+                                  <td>Vilimor Brušić </td>
+                                  <td> <a href="reviews-single.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button> 
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>2</td>
+                                  <td>Mario</td>
+                                  <td>Mikić-Vučak</td>
+                                  <td>testmail@gmail.com</td>
+                                  <td>Pregled zubi</td> 
+                                  <td>Hrvoje Mlinar</td>
+                                  <td><a href="reviews-single.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>3</td>
+                                  <td>Nikola</td>
+                                  <td>Papratović</td>
+                                  <td>testmail@gmail.com</td>
+                                  <td>Ugradnja plombe</td>
+                                  <td>Hrvoje Mlinar</td> 
+                                  <td><a href="reviews-single.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>4</td>
+                                  <td>LinkedIn</td>
+                                  <td>Allen</td>
+                                  <!-- <td>Rock</td> -->
+                                  <td>10/01/2015</td>
+                                  <!-- <td>$2000</td> -->
+                                  <td><span class="label label-info">in progress</span></td>
+                                  <td><span class="badge badge-info">65%</span></td>
+                              </tr>
+                              <tr>
+                                  <td>5</td>
+                                  <td>Tumblr</td>
+                                  <td>David</td>
+                                  <!-- <td>HHH</td> -->
+                                  <td>01/11/2014</td>
+                                  <!-- <td>$2000</td> -->
+                                  <td><span class="label label-warning">in progress</span></td>
+                                  <td><span class="badge badge-danger">95%</span></td>
+                              </tr>
+                              <tr>
+                                  <td>6</td>
+                                  <td>Tesla</td>
+                                  <td>Musk</td>
+                                  <!-- <td>HHH</td> -->
+                                  <td>01/11/2014</td>
+                                  <!-- <td>$2000</td> -->
+                                  <td><span class="label label-info">in progress</span></td>
+                                  <td><span class="badge badge-success">95%</span></td>
+                              </tr>
+                              <tr>
+                                  <td>7</td>
+                                  <td>Ghost</td>
+                                  <td>XXX</td>
+                                  <!-- <td>HHH</td> -->
+                                  <td>01/11/2014</td>
+                                  <!-- <td>$2000</td> -->
+                                  <td><span class="label label-info">in progress</span></td>
+                                  <td><span class="badge badge-success">95%</span></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </section> 
+          </div>
+          <!--Kraj tablice -->
+
+            <!-- Start of pagination -->
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>  
+            <!-- End of pagination -->
 
 
-
-
-
-                </section><!-- /.content -->
                 <div class="footer-main">
                     Copyright &copy Director, 2014
                 </div>

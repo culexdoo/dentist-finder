@@ -7,3 +7,26 @@
     opacity: 1;
     border: 1px white solid;
 }
+.panel-footer {
+    margin-bottom: 10px;
+}
+.btn-xs{
+    margin-top: 5px;
+}
+.table>tbody>tr>td {
+    vertical-align: inherit;
+}
+.btn-info{
+    margin-top: 10px;
+}
+.input-button{
+    margin-top: 10px;
+}
+.col-md-6 .btn-info{
+    margin-left: 15px;
+    margin-bottom:10px;
+}
+.input-profile-picture{
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
