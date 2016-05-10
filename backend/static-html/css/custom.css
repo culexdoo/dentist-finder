@@ -1,35 +1,30 @@
-.footer-main{
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 0px;
-    background: white;
-    opacity: 1;
-    border: 1px white solid;
 }
 .panel-footer {
     margin-bottom: 10px;
 }
-.btn-xs{
+.btn-xs {
     margin-top: 5px;
 }
 .table>tbody>tr>td {
     vertical-align: inherit;
 }
-.btn-info{
+.btn-info {
     margin-top: 10px;
 }
-.input-button{
+.input-button {
     margin-top: 10px;
 }
-.col-md-6 .btn-info{
-    margin-left: 15px;
-    margin-bottom:10px;
-}
-.input-profile-picture{
+.col-md-6 .btn-info {
     margin-left: 15px;
     margin-bottom: 10px;
 }
-.budi-inline{
+.input-profile-picture {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.budi-inline {
     display: inline;
+}
+.row-top {
+    min-height: 892px;
 }

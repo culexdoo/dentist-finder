@@ -263,7 +263,6 @@
                                 <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
                             </a>
                         </li>
-
                         <li>
                             <a href="dentist-list.html">
                                 <i class="fa fa-male"></i> <span>Pregled svih zubara</span>
@@ -272,7 +271,7 @@
 
                         <li>
                             <a href="service-list.html">
-                                <i class="fa fa-asterisk"></i> <span>Informacije o uslugama </span>
+                                <i class="fa fa-asterisk"></i> <span>Informacije o uslugama</span>
                             </a>
                         </li>
 
@@ -291,16 +290,203 @@
             <aside class="right-side">
 
                 <!-- Main content -->
-                <section class="content"> 
+                <div class="row-top">
+                
+                <!-- Tablica -->                
+                <div class="col-md-12">
+
+                            <!-- Tipka za dodaj novog pacijenta -->
+                            <div class="panel-footer bg-white">
+                                                <a href="patient-add.html">
+                                                <button class="btn btn-primary btn-addon btn-sm">
+                                                    <i class="fa fa-plus"></i>
+                                                    Dodaj novog pacijenta
+                                                </button></a>
+                                            </div>
+                            <!-- Kraj tipke -->
 
 
+                            <section class="panel">
+                              <header class="panel-heading">
+                                  Pregled svih pacijenata
+                            </header>
+                            <div class="panel-body table-responsive">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>Id</th>
+                                      <th>Ime</th>
+                                      <th>Prezime</th>
+                                      <th>Kontakt</th>
+                                      <th>Lokacija</th>
+                                      <th>Usluge</th>
+                                      <th>Zakazani datum</th>
+                                      <th>Akcije</th>
+                                  </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Dino</td>
+                                  <td>Belegić</td>
+                                  <td>09x/xxx-xx-xx</td>
+                                  <td>Osijek</td>
+                                  <td>Brušenje zubi</td>
+                                  <td>09.05.2016</td>
+                                  <td> 
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                      <a href="patient-edit.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i></button> 
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>2</td>
+                                  <td>Mario</td>
+                                  <td>Mikić-Vučak</td>
+                                  <td>09x/xxx-xx-xx</td>
+                                  <td>Osijek</td>
+                                  <td>Ugradnja plombi</td>
+                                  <td>09.05.2016</td>
+                                  <td>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                      <a href="patient-edit.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>3</td>
+                                  <td>Nikola</td>
+                                  <td>Papratović</td>
+                                  <td>09x/xxx-xx-xx</td>
+                                  <td>Osijek</td>
+                                  <td>Brušenje zubi, ugradnja plombi</td>
+                                  <td>09.05.2016</td>
+                                  <td>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                      <a href="patient-edit.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>4</td>
+                                  <td>Ivica</td>
+                                  <td>Jarem</td>
+                                  <td>09x/xxx-xx-xx</td>
+                                  <td>Osijek</td>
+                                  <td>Ugradnja plombi</td>
+                                  <td>09.05.2016</td>
+                                  <td>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                      <a href="patient-edit.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>5</td>
+                                  <td>Monika</td>
+                                  <td>Lukas</td>
+                                  <td>09x/xxx-xx-xx</td>
+                                  <td>Zagreb</td>
+                                  <td>Brušenje zubi </td>
+                                  <td>09.05.2016</td>
+                                  <td>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                      <a href="patient-edit.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>6</td>
+                                  <td>Fran</td>
+                                  <td>Ivić</td>
+                                  <td>09x/xxx-xx-xx</td>
+                                  <td>Split</td>
+                                  <td>Brušenje zubi, ugradnja plombi, </td>
+                                  <td>09.05.2016</td>
+                                  <td>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                      <a href="patient-edit.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                              <tr>
+                                  <td>7</td>
+                                  <td>Simona</td>
+                                  <td>Gotovac</td>
+                                  <td>09x/xxx-xx-xx</td>
+                                  <td>Varaždin</td>
+                                  <td>Brušenje zubi</td>
+                                  <td>09.05.2016</td>
+                                  <td>
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                      <a href="patient-edit.html">
+                                      <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                      </a>
+                                      <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i></button>
+                                  </td>  
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </section> 
+          </div>
+          <!--Kraj tablice -->
 
+            <!-- Start of pagination -->
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>  
+            <!-- End of pagination -->
+            </div>
 
+            <!-- Modal za brisanje pacijenta -->
 
-                </section><!-- /.content -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Pozor!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Želite li obrisati odabranog pacijenta?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /Modal za brisanje pacijenta -->
+
+            <div class="row">
                 <div class="footer-main">
                     Copyright &copy Director, 2014
                 </div>
+            </div>
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
