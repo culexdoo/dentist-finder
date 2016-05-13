@@ -259,13 +259,12 @@
 
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="patients-list.html">
+                            <a href="patient-list.html">
                                 <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
                             </a>
                         </li>
-
                         <li>
-                            <a href="dentists-list.html">
+                            <a href="dentist-list.html">
                                 <i class="fa fa-male"></i> <span>Pregled svih zubara</span>
                             </a>
                         </li>
@@ -277,7 +276,7 @@
                         </li>
 
                         <li>
-                            <a href="reviews-list.html">
+                            <a href="review-list.html">
                                 <i class="fa fa-comment"></i> <span>Pregled svih recenzija</span>
                             </a>
                         </li> 
@@ -289,18 +288,143 @@
 
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
-
+            <div class="row">
                 <!-- Main content -->
-                <section class="content"> 
+                <div class="col-md-12">
+
+                <!-- Breadcrumbs -->
+
+                    <ul class="breadcrumb">
+                                <li><a href="#"><i class="fa fa-home"></i> Početna</a></li>
+                                <li><a href="dentist-list.html">Pregled svih zubara</a></li>
+                                <li class="active">Vidi zubara</li>
+                    </ul>
+                    
+                    <!-- /breadcrumbs -->
+                    <!-- Informacije o pacijentu -->
+
+                    <div class="col-md-6">
+                       <section class="panel"> 
+                            <div class="panel-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for="exampleInputName">Ime</label>
+                                        <input type="text" class="form-control" id="exampleInputName" value="Marija" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName">Prezime</label>
+                                        <input type="text" class="form-control" id="exampleInputLastName" value="Marić" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email addresa</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" value="marija.maric@gmail.com" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputAdress">Adresa</label>
+                                        <input type="text" class="form-control" id="exampleInputAdress" value="Zagrebačka 1" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputOIB">OIB</label>
+                                        <input type="text" class="form-control" id="exampleInputOIB" value="132456789" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBirthday">Datum rođenja</label>
+                                        <input type="text" class="form-control" id="exampleInputBirthday" value="01.01.1980" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputKontaktTel1">Kontakt1</label>
+                                        <input type="email" class="form-control" id="exampleInputKontaktTel1" value="03x/xxx-xxx" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputKontaktTel2">Kontakt2</label>
+                                        <input type="email" class="form-control" id="exampleInputKontaktTel2" value="03x/xxx-xxx" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputKontaktMob1">Kontakt1</label>
+                                        <input type="email" class="form-control" id="exampleInputKontaktMob1" value="09x/xxx-xx-xx" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputKontaktMob2">Kontakt2</label>
+                                        <input type="email" class="form-control" id="exampleInputKontaktMob2" value="09x/xxx-xx-xx" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputYearsOfExperiance">Godine iskustva</label>
+                                        <input type="text" class="form-control" id="exampleInputYearsOfExperiance" value="10" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFeaturedOption">Istaknuti zubar</label>
+                                        <div class="checkbox">
+                                                  <label>
+                                                      <input type="checkbox" value="">
+                                                      Da
+                                                  </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Slika, istaknute informacije, povijest bolesti -->
+
+                    <div class="col-md-6"> 
+                        <section class="panel"> 
+                            <div class="panel-body">
+                                <form role="form">
+                                    <div class="col-md-6">
+                                        
+                                    <img src="img/avatar04.png" style="width: 300px; height: 300px;">
+                                    
 
 
+                                    </div>
+                                    <div class="col-md-6">
+                                        Istaknuto:
+                                        <div class="form-group">
+                                            <label for="exampleInputName">Ime</label>
+                                            <input type="text" class="form-control" id="exampleInputName" value="Marija" readonly="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputName">Prezime</label>
+                                            <input type="text" class="form-control" id="exampleInputLastName" value="Marić" readonly="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputOIB">OIB</label>
+                                            <input type="text" class="form-control" id="exampleInputOIB" value="132456798" readonly="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputKontakt">Kontakt</label>
+                                            <input type="email" class="form-control" id="exampleInputKontakt" value="09x/xxx-xx-xx" readonly="true">
+                                        </div>
+                                        <a href="dentist-edit.html">
+                                        <button type="button" class="btn btn-info">Uredi</button>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
 
+                    <!-- / Slika, istaknute informacije, povijest bolesti -->
 
+                    <!-- Donji desni dio, pacijentova povijest -->
 
-                </section><!-- /.content -->
+                    <div class="col-md-6">
+                        <label for="exampleInputNotes">Bilješka zubaru</label> 
+                        <textarea cols="100" rows="8" style="border: 1px solid #CCC; border-radius: 5px;"> </textarea>
+                    </div>
+
+                    <!-- /pacijentova povijest -->
+
+                </div>
+
+                <!-- Informacije o pacijentu -->
+                <div class="row">
                 <div class="footer-main">
                     Copyright &copy Director, 2014
                 </div>
+                </div>
+            </div>
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 

@@ -28,3 +28,10 @@
 .row-top {
     min-height: 892px;
 }
+.form-control[readonly]{
+    cursor: default;
+    background-color: #fff;
+}
+.right-side{
+    background-color: #fff;
+}
