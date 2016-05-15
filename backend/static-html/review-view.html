@@ -20,7 +20,7 @@
     <!-- Custom style -->
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
     <!-- 5 star rating -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,9 +32,9 @@
 <body class="skin-black">
     <!-- header logo: style can be found in header.less -->
     <header class="header">
-        <a href="index.html" class="logo">
+        <a href="dashboard.html" class="logo">
             <!-- Add the class icon to your logo image or logo icon to add the margining -->
-            Logo
+             
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -252,19 +252,24 @@
                         <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                     </div>
                     <div class="pull-left info">
-                        <p>Hello, Jane</p>
+                        <p>Josip Čes</p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
                 <ul class="sidebar-menu">
                     <li>
-                        <a href="patient-list.html">
-                            <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
+                        <a href="dashboard.html">
+                            <i class="fa fa-dashboard"></i> <span>Kontrolna ploča</span>
                         </a>
                     </li>
                     <li>
                         <a href="dentist-list.html">
                             <i class="fa fa-male"></i> <span>Pregled svih zubara</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="patient-list.html">
+                            <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
                         </a>
                     </li>
                     <li>
@@ -286,7 +291,7 @@
             <div class="row-top">
                 <!-- Main content -->
                 <ul class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home"></i> Početna</a></li>
+                    <li><a href="dashboard.html"><i class="fa fa-home"></i> Početna</a></li>
                     <li><a href="review-list.html">Pregled svih recenzija</a></li>
                     <li class="active">Vidi recenziju</li>
                 </ul>   
@@ -353,7 +358,9 @@
                             <div class="textarea">
                                 <textarea rows="7" cols="80"> </textarea>
                             </div>
-                            <button type="submit" class="btn btn-info">Objavi</button>
+                            <a href="review-edit.html">
+                            <button type="submit" class="btn btn-info">Uredi</button>
+                            </a>
                         </div>
                         <!-- /upit pacijenta -->
                     </section>

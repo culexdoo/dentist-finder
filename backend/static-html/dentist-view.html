@@ -29,9 +29,9 @@
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index.html" class="logo">
+            <a href="dashboard.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                Logo
+                
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -250,7 +250,7 @@
                             <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                            <p>Josip Čes</p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -259,8 +259,8 @@
 
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="patient-list.html">
-                                <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
+                            <a href="dashboard.html">
+                                <i class="fa fa-dashboard"></i> <span>Kontrolna ploča</span>
                             </a>
                         </li>
                         <li>
@@ -268,6 +268,11 @@
                                 <i class="fa fa-male"></i> <span>Pregled svih zubara</span>
                             </a>
                         </li>
+                        <li>
+                        <a href="patient-list.html">
+                            <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
+                        </a>
+                    </li>
 
                         <li>
                             <a href="quote-list.html">
@@ -295,7 +300,7 @@
                 <!-- Breadcrumbs -->
 
                     <ul class="breadcrumb">
-                                <li><a href="#"><i class="fa fa-home"></i> Početna</a></li>
+                                <li><a href="dashboard.html"><i class="fa fa-home"></i> Početna</a></li>
                                 <li><a href="dentist-list.html">Pregled svih zubara</a></li>
                                 <li class="active">Vidi zubara</li>
                     </ul>
@@ -304,60 +309,120 @@
                     <!-- Informacije o pacijentu -->
 
                     <div class="col-md-6">
-                       <section class="panel"> 
+                        <section class="panel">
+                            <div class="panel-body">
+                                <form role="form">
+                                    <div class="col-md-6">
+                                        <img src="img/avatar04.png" style="width: 300px; height: 300px;">
+                                    </div>
+                                    <div class="col-md-6">
+                                        Istaknuto:
+                                        <div class="form-group">
+                                            <label for="exampleInputName">Ime</label>
+                                            <input type="text" class="form-control" id="exampleInputName" placeholder="Ime" readonly="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputName">Prezime</label>
+                                            <input type="text" class="form-control" id="exampleInputLastName" placeholder="Prezime" readonly="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputOIB">OIB</label>
+                                            <input type="text" class="form-control" id="exampleInputOIB" placeholder="OIB" readonly="true"> 
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputKontakt">Kontakt</label>
+                                            <input type="email" class="form-control" id="exampleInputKontakt" placeholder="Kontakt" readonly="true">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div>
+                                    <label for="exampleInputData">Podaci o ordinaciji</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputAdress">Adresa</label>
+                                        <input type="text" class="form-control" id="exampleInputAdress" placeholder="Adresa" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputOIB">OIB</label>
+                                        <input type="text" class="form-control" id="exampleInputOIB" placeholder="OIB">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputKontakt">Kontakt</label>
+                                        <input type="text" class="form-control" id="exampleInputKontakt" placeholder="Kontakt" readonly="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputWorkingHours">Radno vrijeme</label>
+                                        <input type="email" class="form-control" id="exampleInputWorkingHours" placeholder="hh:mm - hh:mm" readonly="true">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <label for="exampleInputNotes">Bilješka zubaru</label>
+                        <textarea cols="108" rows="8" style="border: 1px solid #CCC; border-radius: 5px;"> </textarea>
+                        <a href="dentist-edit.html">
+                        <button type="button" class="btn btn-info">Uredi</button>
+                        </a>
+                    </div>
+                    <!-- / Slika, istaknute informacije, povijest bolesti -->
+                    <!-- /pacijentova povijest -->
+                    <!-- Informacije o pacijentu -->
+                    <div class="col-md-6">
+                        <section class="panel">
                             <div class="panel-body">
                                 <form role="form">
                                     <div class="form-group">
                                         <label for="exampleInputName">Ime</label>
-                                        <input type="text" class="form-control" id="exampleInputName" value="Marija" readonly="true">
+                                        <input type="text" class="form-control" id="exampleInputName" placeholder="Ime">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName">Prezime</label>
-                                        <input type="text" class="form-control" id="exampleInputLastName" value="Marić" readonly="true">
+                                        <input type="text" class="form-control" id="exampleInputLastName" placeholder="Prezime">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email addresa</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" value="marija.maric@gmail.com" readonly="true">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputAdress">Adresa</label>
-                                        <input type="text" class="form-control" id="exampleInputAdress" value="Zagrebačka 1" readonly="true">
+                                        <input type="text" class="form-control" id="exampleInputAdress" placeholder="Adresa">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputOIB">OIB</label>
-                                        <input type="text" class="form-control" id="exampleInputOIB" value="132456789" readonly="true">
+                                        <input type="text" class="form-control" id="exampleInputOIB" placeholder="OIB">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputBirthday">Datum rođenja</label>
-                                        <input type="text" class="form-control" id="exampleInputBirthday" value="01.01.1980" readonly="true">
+                                        <input type="text" class="form-control" id="exampleInputBirthday" placeholder="Datum rođenja">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputKontaktTel1">Kontakt1</label>
-                                        <input type="email" class="form-control" id="exampleInputKontaktTel1" value="03x/xxx-xxx" readonly="true">
+                                        <input type="email" class="form-control" id="exampleInputKontaktTel1" placeholder="KontaktTel1">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputKontaktTel2">Kontakt2</label>
-                                        <input type="email" class="form-control" id="exampleInputKontaktTel2" value="03x/xxx-xxx" readonly="true">
+                                        <input type="email" class="form-control" id="exampleInputKontaktTel2" placeholder="KontaktTel2">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputKontaktMob1">Kontakt1</label>
-                                        <input type="email" class="form-control" id="exampleInputKontaktMob1" value="09x/xxx-xx-xx" readonly="true">
+                                        <input type="email" class="form-control" id="exampleInputKontaktMob1" placeholder="KontaktMob1">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputKontaktMob2">Kontakt2</label>
-                                        <input type="email" class="form-control" id="exampleInputKontaktMob2" value="09x/xxx-xx-xx" readonly="true">
+                                        <input type="email" class="form-control" id="exampleInputKontaktMob2" placeholder="KontaktMob2">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputYearsOfExperiance">Godine iskustva</label>
-                                        <input type="text" class="form-control" id="exampleInputYearsOfExperiance" value="10" readonly="true">
+                                        <input type="text" class="form-control" id="exampleInputYearsOfExperiance" placeholder="Godine iskustva">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputFeaturedOption">Istaknuti zubar</label>
                                         <div class="checkbox">
-                                                  <label>
-                                                      <input type="checkbox" value="">
-                                                      Da
-                                                  </label>
+                                            <label>
+                                                <input type="checkbox" value=""> Da
+                                            </label>
                                         </div>
                                     </div>
                                 </form>

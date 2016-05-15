@@ -30,9 +30,9 @@
 <body class="skin-black">
     <!-- header logo: style can be found in header.less -->
     <header class="header">
-        <a href="index.html" class="logo">
+        <a href="dashboard.html" class="logo">
             <!-- Add the class icon to your logo image or logo icon to add the margining -->
-            Logo
+             
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -250,19 +250,24 @@
                         <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                     </div>
                     <div class="pull-left info">
-                        <p>Hello, Jane</p>
+                        <p>Josip Čes</p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
                 <ul class="sidebar-menu">
                     <li>
-                        <a href="patient-list.html">
-                            <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
+                        <a href="dashboard.html">
+                            <i class="fa fa-dashboard"></i> <span>Kontrolna ploča</span>
                         </a>
                     </li>
                     <li>
                         <a href="dentist-list.html">
                             <i class="fa fa-male"></i> <span>Pregled svih zubara</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="patient-list.html">
+                            <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
                         </a>
                     </li>
                     <li>
@@ -284,72 +289,57 @@
             <div class="row-top">
                 <!-- Main content -->
                 <ul class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home"></i> Početna</a></li>
+                    <li><a href="dashboard.html"><i class="fa fa-home"></i> Početna</a></li>
                     <li><a href="quote-list.html">Informacije o uslugama</a></li>
                     <li class="active">Upit pacijenta</li>
                 </ul>
                 <div class="col-md-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Upit pacijenta
+                            Podaci o autoru
                         </header>
-                        <div class="panel-body table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Id</th>
-                                        <th>Ime</th>
-                                        <th>Prezime</th>
-                                        <th>Email</th>
-                                        <th>Naslov</th>
-                                        <th>Zubar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dino</td>
-                                        <td>Belegić</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Brušenje zubi</td>
-                                        <td>Vilimor Brušić </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Upit pacijenta -->
-                        <div class="panel-body">
-
-                            <form class="form-horizontal tasi-form" method="get">
+                        <div class="panel-body col-md-8">
+                            <form role="form">
                                 <div class="form-group">
-                                    <div class="col-md-3">
-                                        <label for="exampleInputTitle">Naslov</label>
-                                        <input type="text" class="form-control">
+                                    <label for="exampleInputName">Ime</label>
+                                    <input type="text" class="form-control" id="exampleInputName" placeholder="Ime">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputLastName">Prezime</label>
+                                    <input type="text" class="form-control" id="exampleInputLastName" placeholder="Prezime">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputKontakt">Kontakt</label>
+                                    <input type="text" class="form-control" id="exampleInputKontakt" placeholder="Kontakt">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputTitle">Upit pacijenta</label>
+                                    <div class="textarea">
+                                        <textarea rows="7" cols="150"> </textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat">
+                                        <a href="#">
+                                            <div class="stat-icon">
+                                                <i class="fa fa-paperclip fa-2x stat-elem"></i>
+                                            </div>
+                                            <h5 class="stat-info">zub.png</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </form>
-
-
-                            <label for="exampleInputTitle">Upit pacijenta</label>
-                            <div class="textarea">
-                                <textarea rows="7" cols="80">  </textarea>
-                            </div>
                         </div>
-                        <!-- /upit pacijenta -->
+                        <div>  
                         <!-- Odgovor na upit -->
-                        <div class="panel-body">
-
-                            <form class="form-horizontal tasi-form" method="get">
-                                <div class="form-group">
-                                    <div class="col-md-3">
-                                        <label for="exampleInputTitle">Naslov</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </form>
+                        <div class="panel-body col-md-9 ">
                             <label for="exampleInputTitle">Odgovor</label>
                             <div class="textarea">
-                                <textarea rows="7" cols="80">  </textarea>
+                                <textarea rows="7" cols="150"> </textarea>
                             </div>
                             <div class="input-button">
                                 <input type="file" id="exampleInputFile">

@@ -64,3 +64,11 @@ label.star:before {
   font-family: FontAwesome;
 }
 /* end of 5 star rating */
+.logo{
+    background: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.bg-white{
+    background: #fff; 
+}
