@@ -19,6 +19,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!-- Custom style -->
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <!-- 5 star rating -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -283,13 +285,18 @@
         <aside class="right-side">
             <div class="row-top">
                 <!-- Main content -->
+                <ul class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i> Početna</a></li>
+                    <li><a href="review-list.html">Pregled svih recenzija</a></li>
+                    <li class="active">Vidi recenziju</li>
+                </ul>   
                 <div class="col-md-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Pregled svih recenzija
+                            Vidi recenziju
                         </header>
                         <div class="panel-body table-responsive">
-                            <table class="table table-hover" id="review-list">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>Id</th>
@@ -310,144 +317,49 @@
                                         <td>Brušenje zubi</td>
                                         <td>Vilimor Brušić </td>
                                         <td>
-                                            <a href="review-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
-                                            </a>
-                                            <a href="review-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                            </a>
-                                            <button type="button" id="btn-delete-review-id-20" class="btn btn-default btn-xs" data-target="#delete-review-id-20"><i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Mario</td>
-                                        <td>Mikić-Vučak</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Pregled zubi</td>
-                                        <td>Hrvoje Mlinar</td>
-                                        <td>
-                                            <a href="review-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
-                                            </a>
-                                            <a href="review-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                            </a>
-                                            <button type="button" id="btn-delete-review-id-21" class="btn btn-default btn-xs" data-target="#delete-review-id-21"><i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Nikola</td>
-                                        <td>Papratović</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Ugradnja plombe</td>
-                                        <td>Hrvoje Mlinar</td>
-                                        <td>
-                                            <a href="review-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
-                                            </a>
-                                            <a href="review-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                            </a>
-                                            <button type="button" id="btn-delete-review-id-22" class="btn btn-default btn-xs" data-target="#delete-review-id-22"><i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Ivo</td>
-                                        <td>Ivić</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Ugradnja plombe</td>
-                                        <td>Hrvoje Mlinar</td>
-                                        <td>
-                                            <a href="review-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
-                                            </a>
-                                            <a href="review-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                            </a>
-                                            <button type="button" id="btn-delete-review-id-23" class="btn btn-default btn-xs" data-target="#delete-review-id-23"><i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Mirko</td>
-                                        <td>Mirkić</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Ugradnja plombe</td>
-                                        <td>Pero Perić</td>
-                                        <td>
-                                            <a href="review-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
-                                            </a>
-                                            <a href="review-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                            </a>
-                                            <button type="button" id="btn-delete-review-id-24" class="btn btn-default btn-xs" data-target="#delete-review-id-24"><i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Stevo</td>
-                                        <td>Stević</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Ugradnja plombe</td>
-                                        <td>Pero Perić</td>
-                                        <td>
-                                            <a href="review-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
-                                            </a>
-                                            <a href="review-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                            </a>
-                                            <button type="button" id="btn-delete-review-id-25" class="btn btn-default btn-xs" data-target="#delete-review-id-25"><i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Mara</td>
-                                        <td>Marić</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Stavljanje krunice</td>
-                                        <td>Mia Mijić</td>
-                                        <td>
-                                            <a href="review-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
-                                            </a>
-                                            <a href="review-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                            </a>
-                                            <button type="button" id="btn-delete-review-id-26" class="btn btn-default btn-xs" data-target="#delete-review-id-26"><i class="fa fa-times"></i>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button type="button" id="btn-delete-review-id-1" class="btn btn-default btn-xs" data-target="#delete-review-id-1"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <!-- Upit pacijenta -->
+                        <div class="panel-body">
+                            <form class="form-horizontal tasi-form" method="get">
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label for="exampleInputTitle">Naslov</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                            <label for="exampleInputTitle">Recenzija pacijenta</label>
+                            <div class="textarea">
+                                <textarea rows="7" cols="80"> </textarea>
+                            </div>
+                            <button type="submit" class="btn btn-info">Objavi</button>
+                        </div>
+                        <!-- /upit pacijenta -->
                     </section>
                 </div>
-                <!--Kraj tablice -->
-                <!-- Start of pagination -->
-                <div class="text-center">
-                    <ul class="pagination">
-                        <li><a href="#">«</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
-                    </ul>
-                </div>
             </div>
-            <!-- End of pagination -->
+            <!-- /.content -->
             <div class="row">
                 <div class="footer-main">
                     Copyright &copy Director, 2014
@@ -456,175 +368,38 @@
         </aside>
         <!-- /.right-side -->
     </div>
-
-    <!-- Modal 20-->
-    <div class="modal fade" id="delete-review-id-20" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati zubara id: 20?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 21-->
-    <div class="modal fade" id="delete-review-id-21" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati zubara id: 21?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 22-->
-    <div class="modal fade" id="delete-review-id-22" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati zubara id: 22?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 23-->
-    <div class="modal fade" id="delete-review-id-23" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati zubara id: 23?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 24-->
-    <div class="modal fade" id="delete-review-id-24" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati zubara id: 24?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 25-->
-    <div class="modal fade" id="delete-review-id-25" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati zubara id: 25?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 26-->
-    <div class="modal fade" id="delete-review-id-26" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati zubara id: 26?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ./wrapper -->
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Modal 1-->
+    <div class="modal fade" id="delete-review-id-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Pozor!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Želite li obrisati recenziju id: 1?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery 2.0.2 -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <!-- Director App -->
     <script src="js/Director/app.js" type="text/javascript"></script>
-    <script type="text/javascript" charset="utf8" src="js/datatables.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        $("#btn-delete-review-id-20").click(function() {
-            $('#delete-review-id-20').modal('show');
+        $("#btn-delete-review-id-1").click(function() {
+            $('#delete-review-id-1').modal('show');
         });
-        $("#btn-delete-review-id-21").click(function() {
-            $('#delete-review-id-21').modal('show');
-        });
-        $("#btn-delete-review-id-22").click(function() {
-            $('#delete-review-id-22').modal('show');
-        });
-        $("#btn-delete-review-id-23").click(function() {
-            $('#delete-review-id-23').modal('show');
-        });
-        $("#btn-delete-review-id-24").click(function() {
-            $('#delete-review-id-24').modal('show');
-        });
-        $("#btn-delete-review-id-25").click(function() {
-            $('#delete-review-id-25').modal('show');
-        });
-        $("#btn-delete-review-id-26").click(function() {
-            $('#delete-review-id-26').modal('show');
-        });
-        $('#patient-list').DataTable();
     });
     </script>
 </body>
