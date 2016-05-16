@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="css/nouislider.css" rel="stylesheet">
+    <link href="css/nouislider.tooltips.css" rel="stylesheet">
+    <link href="css/nouislider.pips.css" rel="stylesheet">
+
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Dental Finder</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">Naslovna</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#poslijednje-objave">Objave</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#contact">Kontakt</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="registration.html"><i class="fa fa-plus-circle blue" aria-hidden="true"></i> Dodaj ordinaciju</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="login.html"><i class="fa fa-user blue" aria-hidden="true"></i> Prijava</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+<section>
+   <div class="container">
+    <div class="row profile">
+     <div class="col-md-4">
+     <h4>Pretraži zubare</h4>
+
+
+                                        <input type="text" id="inputHelpBlock" placeholder="Ime..." class="form-control registration-input-forms">
+                                        <input type="text" id="inputHelpBlock" placeholder="Prezime..." class="form-control registration-input-forms">
+<hr>
+                <h5>Izaberi godine iskustva</h5>
+                 <div class="col-md-12" style="padding-top: 10px;">
+                    <div id="range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                    </div>
+                </div>
+
+   
+
+                    <div style="margin-top: 110px;">
+                    <h5>Izaberi uslugu</h5>
+                      <select class="selectpicker">
+                        <option>Konzervativa</option>
+                        <option>Protetika</option>
+                        <option>Parandologija</option>
+                        <option>Implantatologija</option>
+                        <option>Kirurgija</option>
+                        <option>Ortodoncija</option>
+                        </select>
+                    </div>
+                    <h5>Izaberi regiju</h5>
+                    <div style="margin-top: 10px;">
+                        <select class="selectpicker">
+                         <option>Dalmacija</option>
+                         <option>Južna Dalmacija</option>
+                         <option>Srednja Dalmacija</option>
+                         <option>Sjeverna Dalmacija</option>
+                         <option>Zagora</option>
+                         <option>Istra</option>
+                         <option>Kvarner</option>
+                         <option>Gorski kotar</option>
+                         <option>Lika</option>
+                         <option>Primorje</option>
+                         <option>Zagorje (Hrvatska)</option>
+                         <option>Podravina</option>
+                         <option>Moslavina</option>
+                         <option>Međimurje</option>
+                         <option>Banovina</option>
+                         <option>Kordun</option>
+                         <option>Pokuplje</option>
+                         <option>Posavina</option>
+                         <option>Bjelovarsko-bilogorski kraj</option>
+                         <option>Prigorje</option>
+                         <option>Turopolje</option>
+                         <option>Zagreb</option>
+                         <option>Slavonija</option>
+                         <option>Baranja</option>
+                         <option>Srijem</option>
+                         <option>Hrvatsko zagorje</option>
+                        </select>
+                    </div>
+
+
+<hr>
+
+                         <button type="submit" 
+                         style="width: 350px;" class="btn btn-xl">Pretraži
+                          </button>
+      </div>
+
+ <h4>Rezultati pretrage:</h4>
+		<div class="col-md-8 registration-background">
+        <div class="row" style="margin-bottom: 10px;
+    margin-top: 10px;">
+           
+
+			 
+			   		
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="result_box">
+                        <img style="height:100px; display: block; margin-left: auto; margin-right: auto;"src="img/profile-image.png">
+                        <h5 style="text-align:center;">Hrvoje Horvat</h5>
+                        <h6 style="text-align:center;">Protetika</h6>
+                        <h6 style="text-align:center;">Slavonija</h6>
+                            <form action="profile.html">
+                            <input type="submit" class="btn btn-small" value="Pogledaj profil">
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                  
+            
+   
+        </div>
+         </div>
+	</div>      
+</div>
+
+</section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Dentist Finder 2016</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!--noUIslider-->
+    <script src="js/nouislider.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   
+
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+<script>
+
+var range = document.getElementById('range');
+
+noUiSlider.create(range, {
+    start: [ 2 , 8 ], // Handle start position
+    step: 1, // Slider moves in increments of '10'
+    margin: 1, // Handles must be more than '20' apart
+    connect: true, // Display a colored bar between the handles
+    direction: 'ltr', // Put '0' at the bottom of the slider
+    orientation: 'horizontal', // Orient the slider vertically
+    behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+    range: { // Slider can select '0' to '100'
+        'min': 0,
+        'max': 10
+    },
+    pips: { // Show a scale with the slider
+        mode: 'steps',
+        density: 2
+    }
+});
+
+
+$('.selectpicker').selectpicker({
+  style: 'btn btn-select',
+  size: 10
+});
+
+</script>
+
+</body>
+</html>
