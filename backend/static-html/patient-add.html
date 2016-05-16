@@ -256,27 +256,27 @@
                 <ul class="sidebar-menu">
                     <li>
                         <a href="dashboard.html">
-                            <i class="fa fa-dashboard"></i> <span>Kontrolna ploča</span>
+                            <i class="fa fa-dashboard"></i> <span>Početna</span>
                         </a>
                     </li>
                     <li>
                         <a href="dentist-list.html">
-                            <i class="fa fa-male"></i> <span>Pregled svih zubara</span>
+                            <i class="fa fa-male"></i> <span>Zubari</span>
                         </a>
                     </li>
                     <li>
                         <a href="patient-list.html">
-                            <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
+                            <i class="fa fa-user"></i> <span>Pacijenti</span>
                         </a>
                     </li>
                     <li>
                         <a href="quote-list.html">
-                            <i class="fa fa-asterisk"></i> <span>Informacije o uslugama</span>
+                            <i class="fa fa-asterisk"></i> <span>Upiti</span>
                         </a>
                     </li>
                     <li>
                         <a href="review-list.html">
-                            <i class="fa fa-comment"></i> <span>Pregled svih recenzija</span>
+                            <i class="fa fa-comment"></i> <span>Recenzije</span>
                         </a>
                     </li>
                 </ul>
@@ -295,11 +295,65 @@
                         <li class="active">Dodaj novog pacijenta</li>
                     </ul>
                     <!-- /breadcrumbs -->
+                    <!-- Slika, istaknute informacije, povijest bolesti -->
+                    <div class="col-md-6">
+                        <section class="panel">
+                            <div class="panel-body">
+                                <form role="form">
+                                    <div class="col-md-6">
+                                        <img src="img/avatar2.png" style="width: 100%; height: auto;">
+                                        <div class="input-profile-picture">
+                                            <input type="file" id="exampleInputFile">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6"> 
+                                    <div class="form-group">
+                                    <label for="examplePointedOut">Istaknuto:</label> 
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6"> 
+                                        <div class="form-group">
+                                            <label for="exampleInputRegistrationDate">Datum registracije</label>
+                                            <input type="text" class="form-control" id="exampleInputRegistrationDate" placeholder="Ime">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputNumberOfReviews">Broj recenzija</label>
+                                            <input type="text" class="form-control" id="exampleInputNumberOfReviews" placeholder="Broj recenzija">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail">Email</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputKontakt">Kontakt</label>
+                                            <input type="email" class="form-control" id="exampleInputKontakt" placeholder="Kontakt">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <!-- / Slika, istaknute informacije, povijest bolesti -->
+                        <section class="panel">
+                        <div class="panel-body">
+                        <div class="col-md-12">
+                        <!-- Donji desni dio, pacijentova povijest -->
+                        <label for="exampleInputNotes">Bilješka o pacijentu:</label>
+                        <textarea cols="102" rows="8" style="border: 1px solid #CCC; border-radius: 5px;"> </textarea>
+                        <button type="submit" class="btn btn-info">Spremi</button>
+                        </div>
+                        </div>
+                        </section>
+                    </div>
+                    
+                    <!-- /pacijentova povijest -->
                     <!-- Informacije o pacijentu -->
                     <div class="col-md-6">
                         <section class="panel">
                             <div class="panel-body">
                                 <form role="form">
+                                <div class="form-group">
+                                <label for="exampleInputData" class="move-left">Podaci o pacijentu:</label>
+                                </div>
                                     <div class="form-group">
                                         <label for="exampleInputName">Ime</label>
                                         <input type="text" class="form-control" id="exampleInputName" placeholder="Ime">
@@ -341,55 +395,13 @@
                                         <input type="email" class="form-control" id="exampleInputKontaktMob2" placeholder="KontaktMob2">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputDoctor">Zubar</label>
-                                        <input type="text" class="form-control" id="exampleInputDentist" placeholder="Željeni zubar">
+                                        <label for="exampleInputDentist">Primarni zubar</label>
+                                        <input type="text" class="form-control" id="exampleInputDentist" placeholder="Primarni zubar">
                                     </div>
                                 </form>
                             </div>
                         </section>
                     </div>
-                    <!-- Slika, istaknute informacije, povijest bolesti -->
-                    <div class="col-md-6">
-                        <section class="panel">
-                            <div class="panel-body">
-                                <form role="form">
-                                    <div class="col-md-6">
-                                        <!-- PREDLOŽAK ZA SLIKU -->
-                                    </div>
-                                    <div class="col-md-6">
-                                        Istaknuto:
-                                        <div class="form-group">
-                                            <label for="exampleInputName">Ime</label>
-                                            <input type="text" class="form-control" id="exampleInputName" placeholder="Ime">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputName">Prezime</label>
-                                            <input type="text" class="form-control" id="exampleInputLastName" placeholder="Prezime">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputOIB">OIB</label>
-                                            <input type="text" class="form-control" id="exampleInputOIB" placeholder="OIB">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputKontakt">Kontakt</label>
-                                            <input type="email" class="form-control" id="exampleInputKontakt" placeholder="Kontakt">
-                                        </div>
-                                        <div class="input-profile-picture">
-                                            <input type="file" id="exampleInputFile">
-                                        </div>
-                                        <button type="submit" class="btn btn-info">Spremi</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </section>
-                    </div>
-                    <!-- / Slika, istaknute informacije, povijest bolesti -->
-                    <!-- Donji desni dio, pacijentova povijest -->
-                    <div class="col-md-6">
-                        <label for="exampleInputNotes">Bilješka zubaru</label>
-                        <textarea cols="100" rows="8"> </textarea>
-                    </div>
-                    <!-- /pacijentova povijest -->
                 </div>
             </div>
             <!-- Informacije o pacijentu -->

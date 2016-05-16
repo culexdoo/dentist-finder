@@ -259,27 +259,27 @@
                 <ul class="sidebar-menu">
                     <li>
                         <a href="dashboard.html">
-                            <i class="fa fa-dashboard"></i> <span>Kontrolna ploča</span>
+                            <i class="fa fa-dashboard"></i> <span>Početna</span>
                         </a>
                     </li>
                     <li>
                         <a href="dentist-list.html">
-                            <i class="fa fa-male"></i> <span>Pregled svih zubara</span>
+                            <i class="fa fa-male"></i> <span>Zubari</span>
                         </a>
                     </li>
                     <li>
                         <a href="patient-list.html">
-                            <i class="fa fa-user"></i> <span>Pregled svih pacijenata</span>
+                            <i class="fa fa-user"></i> <span>Pacijenti</span>
                         </a>
                     </li>
                     <li>
                         <a href="quote-list.html">
-                            <i class="fa fa-asterisk"></i> <span>Informacije o uslugama</span>
+                            <i class="fa fa-asterisk"></i> <span>Upiti</span>
                         </a>
                     </li>
                     <li>
                         <a href="review-list.html">
-                            <i class="fa fa-comment"></i> <span>Pregled svih recenzija</span>
+                            <i class="fa fa-comment"></i> <span>Recenzije</span>
                         </a>
                     </li>
                 </ul>
@@ -298,71 +298,55 @@
                 <div class="col-md-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Vidi recenziju
+                            Podaci o autoru
                         </header>
-                        <div class="panel-body table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Id</th>
-                                        <th>Ime</th>
-                                        <th>Prezime</th>
-                                        <th>Email</th>
-                                        <th>Usluge</th>
-                                        <th>Doktor</th>
-                                        <th>Akcije</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dino</td>
-                                        <td>Belegić</td>
-                                        <td>testmail@gmail.com</td>
-                                        <td>Brušenje zubi</td>
-                                        <td>Vilimor Brušić </td>
-                                        <td>
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                            <button type="button" id="btn-delete-review-id-1" class="btn btn-default btn-xs" data-target="#delete-review-id-1"><i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Upit pacijenta -->
-                        <div class="panel-body">
-                            <form class="form-horizontal tasi-form" method="get">
+                        <div class="panel-body col-md-8">
+                            <form role="form">
                                 <div class="form-group">
-                                    <div class="col-md-3">
-                                        <label for="exampleInputTitle">Naslov</label>
-                                        <input type="text" class="form-control">
+                                    <label for="exampleInputName">Ime</label>
+                                    <input type="text" class="form-control" id="exampleInputName" placeholder="Ime">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputLastName">Prezime</label>
+                                    <input type="text" class="form-control" id="exampleInputLastName" placeholder="Prezime">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputKontakt">Kontakt</label>
+                                    <input type="text" class="form-control" id="exampleInputKontakt" placeholder="Kontakt">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputDentist">Ime zubara</label>
+                                    <input type="text" class="form-control" id="exampleInputDentist" placeholder="Ime zubara">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputTitle">Recenzija pacijenta</label>
+                                    <div class="textarea">
+                                        <textarea rows="7" cols="150"> </textarea>
                                     </div>
                                 </div>
+                                <div class="stars">
+                                    <form action="">
+                                        <input class="star star-5" id="star-5" type="radio" name="star" />
+                                        <label class="star star-5" for="star-5"></label>
+                                        <input class="star star-4" id="star-4" type="radio" name="star" />
+                                        <label class="star star-4" for="star-4"></label>
+                                        <input class="star star-3" id="star-3" type="radio" name="star" />
+                                        <label class="star star-3" for="star-3"></label>
+                                        <input class="star star-2" id="star-2" type="radio" name="star" />
+                                        <label class="star star-2" for="star-2"></label>
+                                        <input class="star star-1" id="star-1" type="radio" name="star" />
+                                        <label class="star star-1" for="star-1"></label>
+                                    </form>
+                                </div>
+                                <a href="review-edit.html">
+                                <button type="button" class="btn btn-info">Uredi</button>
+                                </a>
                             </form>
-                            <div class="stars">
-                                <form action="">
-                                    <input class="star star-5" id="star-5" type="radio" name="star" />
-                                    <label class="star star-5" for="star-5"></label>
-                                    <input class="star star-4" id="star-4" type="radio" name="star" />
-                                    <label class="star star-4" for="star-4"></label>
-                                    <input class="star star-3" id="star-3" type="radio" name="star" />
-                                    <label class="star star-3" for="star-3"></label>
-                                    <input class="star star-2" id="star-2" type="radio" name="star" />
-                                    <label class="star star-2" for="star-2"></label>
-                                    <input class="star star-1" id="star-1" type="radio" name="star" />
-                                    <label class="star star-1" for="star-1"></label>
-                                </form>
-                            </div>
-                            <label for="exampleInputTitle">Recenzija pacijenta</label>
-                            <div class="textarea">
-                                <textarea rows="7" cols="80"> </textarea>
-                            </div>
-                            <a href="review-edit.html">
-                            <button type="submit" class="btn btn-info">Uredi</button>
-                            </a>
-                        </div>
-                        <!-- /upit pacijenta -->
+                        </div> 
                     </section>
                 </div>
             </div>
@@ -376,25 +360,7 @@
         <!-- /.right-side -->
     </div>
     <!-- ./wrapper -->
-    <!-- Modal 1-->
-    <div class="modal fade" id="delete-review-id-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pozor!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Želite li obrisati recenziju id: 1?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- jQuery 2.0.2 -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -402,13 +368,7 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <!-- Director App -->
     <script src="js/Director/app.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $("#btn-delete-review-id-1").click(function() {
-            $('#delete-review-id-1').modal('show');
-        });
-    });
-    </script>
+    
 </body>
 
 </html>
