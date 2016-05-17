@@ -76,3 +76,13 @@ label.star:before {
 .move-down {
     margin-top: 20px;
 }
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.pt300 {
+    padding: 300px 0px 0px 0px;
+}
+.row-top2 {
+    min-height: 941px;
+}
