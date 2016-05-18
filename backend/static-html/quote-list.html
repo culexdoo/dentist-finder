@@ -19,6 +19,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!-- Custom style -->
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -270,6 +272,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="blog-list.html">
+                            <i class="fa fa-book"></i> <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="quote-list.html">
                             <i class="fa fa-asterisk"></i> <span>Upiti</span>
                         </a>
@@ -315,12 +322,12 @@
                                         <td>Vilimor Brušić </td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-1" class="btn btn-default btn-xs" data-target="#delete-quote-id-1"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-1" class="btn btn-danger btn-xs" data-target="#delete-quote-id-1"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -333,12 +340,12 @@
                                         <td>Hrvoje Mlinar</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-2" class="btn btn-default btn-xs" data-target="#delete-quote-id-2"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-2" class="btn btn-danger btn-xs" data-target="#delete-quote-id-2"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -351,12 +358,12 @@
                                         <td>Hrvoje Mlinar</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-3" class="btn btn-default btn-xs" data-target="#delete-quote-id-3"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-3" class="btn btn-danger btn-xs" data-target="#delete-quote-id-3"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -369,12 +376,12 @@
                                         <td>Davor Darić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-4" class="btn btn-default btn-xs" data-target="#delete-quote-id-4"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-4" class="btn btn-danger btn-xs" data-target="#delete-quote-id-4"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -387,12 +394,12 @@
                                         <td>Ana Anić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-5" class="btn btn-default btn-xs" data-target="#delete-quote-id-5"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-5" class="btn btn-danger btn-xs" data-target="#delete-quote-id-5"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -405,12 +412,12 @@
                                         <td>Hrvoje Mlinar</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-6" class="btn btn-default btn-xs" data-target="#delete-quote-id-6"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-6" class="btn btn-danger btn-xs" data-target="#delete-quote-id-6"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -423,12 +430,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-7" class="btn btn-default btn-xs" data-target="#delete-quote-id-7"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-7" class="btn btn-danger btn-xs" data-target="#delete-quote-id-7"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -441,12 +448,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-8" class="btn btn-default btn-xs" data-target="#delete-quote-id-8"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-8" class="btn btn-danger btn-xs" data-target="#delete-quote-id-8"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -459,12 +466,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-9" class="btn btn-default btn-xs" data-target="#delete-quote-id-9"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-9" class="btn btn-danger btn-xs" data-target="#delete-quote-id-9"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -477,12 +484,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-10" class="btn btn-default btn-xs" data-target="#delete-quote-id-10"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-10" class="btn btn-danger btn-xs" data-target="#delete-quote-id-10"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -495,12 +502,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-11" class="btn btn-default btn-xs" data-target="#delete-quote-id-11"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-11" class="btn btn-danger btn-xs" data-target="#delete-quote-id-11"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -513,12 +520,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-12" class="btn btn-default btn-xs" data-target="#delete-quote-id-12"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-12" class="btn btn-danger btn-xs" data-target="#delete-quote-id-12"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -531,12 +538,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-13" class="btn btn-default btn-xs" data-target="#delete-quote-id-13"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-13" class="btn btn-danger btn-xs" data-target="#delete-quote-id-13"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -549,12 +556,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-14" class="btn btn-default btn-xs" data-target="#delete-quote-id-14"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-14" class="btn btn-danger btn-xs" data-target="#delete-quote-id-14"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -567,12 +574,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-15" class="btn btn-default btn-xs" data-target="#delete-quote-id-15"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-15" class="btn btn-danger btn-xs" data-target="#delete-quote-id-15"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -585,12 +592,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-16" class="btn btn-default btn-xs" data-target="#delete-quote-id-16"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-16" class="btn btn-danger btn-xs" data-target="#delete-quote-id-16"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -603,12 +610,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-17" class="btn btn-default btn-xs" data-target="#delete-quote-id-17"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-17" class="btn btn-danger btn-xs" data-target="#delete-quote-id-17"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -621,12 +628,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-18" class="btn btn-default btn-xs" data-target="#delete-quote-id-18"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-18" class="btn btn-danger btn-xs" data-target="#delete-quote-id-18"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -639,12 +646,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-19" class="btn btn-default btn-xs" data-target="#delete-quote-id-19"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-19" class="btn btn-danger btn-xs" data-target="#delete-quote-id-19"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -657,12 +664,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-20" class="btn btn-default btn-xs" data-target="#delete-quote-id-20"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-20" class="btn btn-danger btn-xs" data-target="#delete-quote-id-20"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -675,12 +682,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-21" class="btn btn-default btn-xs" data-target="#delete-quote-id-21"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-21" class="btn btn-danger btn-xs" data-target="#delete-quote-id-21"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -693,12 +700,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-22" class="btn btn-default btn-xs" data-target="#delete-quote-id-22"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-22" class="btn btn-danger btn-xs" data-target="#delete-quote-id-22"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -711,12 +718,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-23" class="btn btn-default btn-xs" data-target="#delete-quote-id-23"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-23" class="btn btn-danger btn-xs" data-target="#delete-quote-id-23"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -729,12 +736,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-24" class="btn btn-default btn-xs" data-target="#delete-quote-id-24"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-24" class="btn btn-danger btn-xs" data-target="#delete-quote-id-24"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -747,12 +754,12 @@
                                         <td>Borna Borić</td>
                                         <td>
                                             <a href="quote-view.html">
-                                            <button class="btn btn-default btn-xs"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button>
                                             </a>
                                             <a href="quote-edit.html">
-                                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                             </a>
-                                            <button type="button" id="btn-delete-quote-id-25" class="btn btn-default btn-xs" data-target="#delete-quote-id-25"><i class="fa fa-times"></i>
+                                            <button type="button" id="btn-delete-quote-id-25" class="btn btn-danger btn-xs" data-target="#delete-quote-id-25"><i class="fa fa-times"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -1257,6 +1264,11 @@
     <!-- Director App -->
     <script src="js/Director/app.js" type="text/javascript"></script>
     <script type="text/javascript" charset="utf8" src="js/datatables.js"></script>
+    <script type="text/javascript" charset="utf8" src="js/dataTables.buttons.min.js"></script>
+   <script type="text/javascript" charset="utf8" src="js/jszip.min.js"></script>
+   <script type="text/javascript" charset="utf8" src="js/pdfmake.min.js"></script>
+   <script type="text/javascript" charset="utf8" src="js/vfs_fonts.js"></script>
+   <script type="text/javascript" charset="utf8" src="js/buttons.html5.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $("#btn-delete-quote-id-1").click(function() {
@@ -1335,7 +1347,18 @@
             $('#delete-quote-id-25').modal('show');
         });
 
-        $('#quote-list').DataTable();
+        $('#quote-list').DataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.11/i18n/Croatian.json"
+            },
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ]
+        });
     });
     </script>
 </body>

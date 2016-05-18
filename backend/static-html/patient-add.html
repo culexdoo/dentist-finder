@@ -270,6 +270,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="blog-list.html">
+                            <i class="fa fa-book"></i> <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="quote-list.html">
                             <i class="fa fa-asterisk"></i> <span>Upiti</span>
                         </a>
@@ -303,7 +308,7 @@
                                     <div class="col-md-6">
                                         <img src="img/avatar2.png" style="width: 100%; height: auto;">
                                         <div class="input-profile-picture">
-                                            <input type="file" id="exampleInputFile">
+                                            <input type="file" class="filestyle" data-input="false">
                                         </div>
                                     </div>
                                     <div class="col-md-6"> 
@@ -317,16 +322,12 @@
                                             <input type="text" class="form-control" id="exampleInputRegistrationDate" placeholder="Ime">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputNumberOfReviews">Broj recenzija</label>
-                                            <input type="text" class="form-control" id="exampleInputNumberOfReviews" placeholder="Broj recenzija">
+                                            <label>OIB</label>
+                                            <input type="text" class="form-control" placeholder="OIB">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail">Email</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail" placeholder="Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputKontakt">Kontakt</label>
-                                            <input type="email" class="form-control" id="exampleInputKontakt" placeholder="Kontakt">
+                                            <label>Email adresa 1</label>
+                                            <input type="email" class="form-control" id="exampleInputKontakt" placeholder="Email">
                                         </div>
                                     </div>
                                 </form>
@@ -361,39 +362,27 @@
                                     <div class="form-group">
                                         <label for="exampleInputName">Prezime</label>
                                         <input type="text" class="form-control" id="exampleInputLastName" placeholder="Prezime">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email addresa</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                    </div>
+                                    </div> 
                                     <div class="form-group">
                                         <label for="exampleInputAdress">Adresa</label>
                                         <input type="text" class="form-control" id="exampleInputAdress" placeholder="Adresa">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputOIB">OIB</label>
-                                        <input type="text" class="form-control" id="exampleInputOIB" placeholder="OIB">
-                                    </div>
+                                    </div> 
                                     <div class="form-group">
                                         <label for="exampleInputBirthday">Datum rođenja</label>
                                         <input type="text" class="form-control" id="exampleInputBirthday" placeholder="Datum rođenja">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputKontaktTel1">Kontakt1</label>
+                                        <label for="exampleInputEmail1">Email addresa 2</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputKontaktTel1">Kontakt Tel 1</label>
                                         <input type="email" class="form-control" id="exampleInputKontaktTel1" placeholder="KontaktTel1">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputKontaktTel2">Kontakt2</label>
+                                        <label for="exampleInputKontaktTel2">Kontakt Tel 2</label>
                                         <input type="email" class="form-control" id="exampleInputKontaktTel2" placeholder="KontaktTel2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputKontaktMob1">Kontakt1</label>
-                                        <input type="email" class="form-control" id="exampleInputKontaktMob1" placeholder="KontaktMob1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputKontaktMob2">Kontakt2</label>
-                                        <input type="email" class="form-control" id="exampleInputKontaktMob2" placeholder="KontaktMob2">
-                                    </div>
+                                    </div> 
                                     <div class="form-group">
                                         <label for="exampleInputDentist">Primarni zubar</label>
                                         <input type="text" class="form-control" id="exampleInputDentist" placeholder="Primarni zubar">
@@ -421,6 +410,13 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <!-- Director App -->
     <script src="js/Director/app.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(":file").filestyle();
+    });
+    </script>
 </body>
 
 </html>
