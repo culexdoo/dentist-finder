@@ -7,7 +7,7 @@
     <meta name="description" content="Post a job position or create your online resume by TheJobs!">
     <meta name="keywords" content="">
 
-    <title>Naslovna</title>
+    <title>TheJobs</title>
 
     <!-- Styles -->
     <link href="assets/css/app.min.css" rel="stylesheet">
@@ -40,34 +40,75 @@
         <!-- END Logo -->
 
         <!-- User account -->
-        <div class="pull-right user-login">
-          <a class="btn btn-sm btn-primary" href="user-login.html">Prijava</a> ili <a href="user-register.html">registracija</a>
+        <div class="pull-right">
+
+          <div class="dropdown user-account">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+              <img src="assets/img/logo-envato.png" alt="avatar">
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="user-login.html">Login</a></li>
+              <li><a href="user-register.html">Register</a></li>
+              <li><a href="user-forget-pass.html">Forget pass</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
+
         </div>
         <!-- END User account -->
 
         <!-- Navigation menu -->
         <ul class="nav-menu">
           <li>
-            <a class="active" href="index.html">Naslovna</a>
-          </li>
-          <li>
-           <a href="#">Poslovi</a>
+            <a class="active" href="index.html">Home</a>
             <ul>
-              <li><a href="job-list-1.html">Pretraži poslove</a></li>
-              <li><a href="job-add.html">Dodaj posao</a></li>
+              <li><a href="index.html">Version 1</a></li>
+              <li><a class="active" href="index-2.html">Version 2</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">Zubari</a>
+            <a href="#">Position</a>
             <ul>
-              <li><a href="resume-list.html">Pretraži zubare</a></li>
-              <li><a href="resume-add.html">Registriraj zubara</a></li>
+              <li><a href="job-list-1.html">Browse jobs - 1</a></li>
+              <li><a href="job-list-2.html">Browse jobs - 2</a></li>
+              <li><a href="job-list-3.html">Browse jobs - 3</a></li>
+              <li><a href="job-detail.html">Job detail</a></li>
+              <li><a href="job-add.html">Post a job</a></li>
+              <li><a href="job-manage.html">Manage jobs</a></li>
             </ul>
           </li>
-               <li><a href="page-about.html">O nama</a></li>
-        
+          <li>
+            <a href="#">Resume</a>
+            <ul>
+              <li><a href="resume-list.html">Browse resumes</a></li>
+              <li><a href="resume-detail.html">Resume detail</a></li>
+              <li><a href="resume-add.html">Create a resume</a></li>
+              <li><a href="resume-manage.html">Manage resumes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Company</a>
+            <ul>
+              <li><a href="company-list.html">Browse companies</a></li>
+              <li><a href="company-detail.html">Company detail</a></li>
+              <li><a href="company-add.html">Create a company</a></li>
+              <li><a href="company-manage.html">Manage companies</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pages</a>
+            <ul>
               <li><a href="page-blog.html">Blog</a></li>
-
+              <li><a href="page-post.html">Blog-post</a></li>
+              <li><a href="page-about.html">About</a></li>
+              <li><a href="page-contact.html">Contact</a></li>
+              <li><a href="page-faq.html">FAQ</a></li>
+              <li><a href="page-pricing.html">Pricing</a></li>
+              <li><a href="page-typography.html">Typography</a></li>
+              <li><a href="page-ui-elements.html">UI elements</a></li>
+            </ul>
+          </li>
         </ul>
         <!-- END Navigation menu -->
 
@@ -81,21 +122,21 @@
       <div class="container">
         <div class="col-xs-12">
           <br><br>
-          <h2>Pronađite svog zubara preko dentist findera!</h2>
-          <h5 class="font-alt">ili objavite svoj problem, neka zubar pronađe Vas!</h5>
+          <h2>We offer <mark>1,259</mark> job vacancies right now!</h2>
+          <h5 class="font-alt">Find your desire one in a minute</h5>
           <br><br><br>
           <form class="header-job-search">
             <div class="input-keyword">
-              <input type="text" class="form-control" placeholder="Usluge npr. Brušenje zuba">
+              <input type="text" class="form-control" placeholder="Job title, skills, or company">
             </div>
 
             <div class="input-location">
-              <input type="text" class="form-control" placeholder="Grad ili županija">
+              <input type="text" class="form-control" placeholder="City, state or zip">
             </div>
 
             <div class="btn-search">
-              <button class="btn btn-primary" type="submit">Pronađi zubara</button>
-              <a href="job-list.html">Napredno pretraživanje</a>
+              <button class="btn btn-primary" type="submit">Find jobs</button>
+              <a href="">Advanced Job Search</a>
             </div>
           </form>
         </div>
@@ -111,14 +152,15 @@
 
 
       <!-- Recent jobs -->
-      <section>
+      <section class="bg-alt">
         <div class="container">
           <header class="section-header">
-            <span>Najnovije</span>
-            <h2>Zadnje ponude</h2>
+            <span>Latest</span>
+            <h2>Recent jobs</h2>
+            <p>Here's the last five job posted on the website</p>
           </header>
 
-          <div class="row item-blocks-connected">
+          <div class="row item-blocks-condensed">
 
             <!-- Job item -->
             <div class="col-xs-12">
@@ -126,12 +168,12 @@
                 <header>
                   <img src="assets/img/logo-google.jpg" alt="">
                   <div class="hgroup">
-                    <h4>Brušenje zuba</h4>
-                    <h5>Marica</h5>
+                    <h4>Senior front-end developer</h4>
+                    <h5>Google</h5>
                   </div>
                   <div class="header-meta">
-                    <span class="location">Zagreb</span>
-                    <span class="label label-success">Može čekati</span>
+                    <span class="location">Menlo park, CA</span>
+                    <span class="label label-success">Full-time</span>
                   </div>
                 </header>
               </a>
@@ -145,12 +187,12 @@
                 <header>
                   <img src="assets/img/logo-linkedin.png" alt="">
                   <div class="hgroup">
-                    <h4>Zubna proteza</h4>
-                    <h5>Ivo</h5>
+                    <h4>Software Engineer (Entry or Senior)</h4>
+                    <h5>Linkedin</h5>
                   </div>
                   <div class="header-meta">
-                    <span class="location">Osijek</span>
-                    <span class="label label-warning">Žurno</span>
+                    <span class="location">Livermore, CA</span>
+                    <span class="label label-warning">Part-time</span>
                   </div>
                 </header>
               </a>
@@ -163,12 +205,12 @@
                 <header>
                   <img src="assets/img/logo-envato.png" alt="">
                   <div class="hgroup">
-                    <h4>Slikanje zubi</h4>
-                    <h5>Kristian</h5>
+                    <h4>Full Stack Web Developer</h4>
+                    <h5>Envato</h5>
                   </div>
                   <div class="header-meta">
-                    <span class="location">Istra</span>
-                    <span class="label label-info">Nešto</span>
+                    <span class="location">San Francisco, CA</span>
+                    <span class="label label-info">Freelance</span>
                   </div>
                 </header>
               </a>
@@ -181,12 +223,12 @@
                 <header>
                   <img src="assets/img/logo-facebook.png" alt="">
                   <div class="hgroup">
-                    <h4>Upala desni</h4>
-                    <h5>Živko</h5>
+                    <h4>Web Applications Developer</h4>
+                    <h5>Facebook</h5>
                   </div>
                   <div class="header-meta">
-                    <span class="location">Rijeka</span>
-                    <span class="label label-danger">Hitno</span>
+                    <span class="location">Lexington, MA</span>
+                    <span class="label label-danger">Internship</span>
                   </div>
                 </header>
               </a>
@@ -199,12 +241,12 @@
                 <header>
                   <img src="assets/img/logo-microsoft.jpg" alt="">
                   <div class="hgroup">
-                    <h4>Zamjena plombi</h4>
-                    <h5>Josip</h5>
+                    <h4>Sr. SQL Server Developer</h4>
+                    <h5>Microsoft</h5>
                   </div>
                   <div class="header-meta">
-                    <span class="location">Osijek</span>
-                    <span class="label label-success">Može čekati</span>
+                    <span class="location">Palo Alto, CA</span>
+                    <span class="label label-success">Remote</span>
                   </div>
                 </header>
               </a>
@@ -214,64 +256,33 @@
           </div>
 
           <br><br>
-          <p class="text-center"><a class="btn btn-info" href="job-list.html">Pretraži sve ponude</a></p>
+          <p class="text-center"><a class="btn btn-info" href="job-list.html">Browse all jobs</a></p>
         </div>
       </section>
       <!-- END Recent jobs -->
-
-
-      <!-- Facts -->
-      <section class="bg-img bg-repeat no-overlay section-sm" style="background-image: url(assets/img/bg-pattern.png)">
-        <div class="container">
-
-          <div class="row">
-            <div class="counter col-md-3 col-sm-6">
-              <p><span data-from="0" data-to="6890"></span>+</p>
-              <h6>Poslova</h6>
-            </div>
-
-            <div class="counter col-md-3 col-sm-6">
-              <p><span data-from="0" data-to="5200"></span>+</p>
-              <h6>Članova</h6>
-            </div>
-
-            <div class="counter col-md-3 col-sm-6">
-              <p><span data-from="0" data-to="800"></span>+</p>
-              <h6>Ordinacija</h6>
-            </div>
-
-            <div class="counter col-md-3 col-sm-6">
-              <p><span data-from="0" data-to="15400"></span>+</p>
-              <h6>Riješenih poslova</h6>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <!-- END Facts -->
 
 
       <!-- How it works -->
       <section>
         <div class="container">
 
-          <div class="col-sm-12 col-md-6">
-            <header class="section-header text-left">
-              <span>Dentistfinder</span>
-              <h2>Kako radi?</h2>
-            </header>
-
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet ac est eget ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu ante ultricies, scelerisque nunc sed, blandit libero.</p>
-            <p>Donec et elementum est. Aliquam felis odio, laoreet in tristique id, cursus id enim. Sed mattis enim id dictum lobortis. Nullam libero nibh, semper ut pulvinar in, bibendum et augue. Nunc consectetur ante at maximus pellentesque. </p>
-            
-            
-            <br><br>
-            <a class="btn btn-primary" href="page-typography.html">Saznaj više</a>
-          </div>
-
           <div class="col-sm-12 col-md-6 hidden-xs hidden-sm">
             <br>
             <img class="center-block" src="assets/img/how-it-works.png" alt="how it works">
+          </div>
+
+          <div class="col-sm-12 col-md-6">
+            <header class="section-header text-left">
+              <span>Workflow</span>
+              <h2>How it works</h2>
+            </header>
+
+            <p class="lead">Pellentesque et pulvinar orci. Suspendisse sed euismod purus. Pellentesque nunc ex, ultrices eu enim non, consectetur interdum nisl. Nam congue interdum mauris, sed ultrices augue lacinia in. Praesent turpis purus, faucibus in tempor vel, dictum ac eros.</p>
+            <p>Nulla quis felis et orci luctus semper sit amet id dui. Aenean ultricies lectus nunc, vel rhoncus odio sagittis eu. Sed at felis eu tortor mattis imperdiet et sed tortor. Nullam ac porttitor arcu. Vivamus tristique elit id tempor lacinia. Donec auctor at nibh eget tincidunt. Nulla facilisi. Nunc condimentum dictum mattis.</p>
+            
+            
+            <br><br>
+            <a class="btn btn-primary" href="page-typography.html">Learn more</a>
           </div>
 
         </div>
@@ -283,64 +294,126 @@
       <section class="bg-alt">
         <div class="container">
           <header class="section-header">
-            <span>Kategorije</span>
-            <h2>Pretraga po kategorijama</h2>
-            <p>Pronađite zubara preko kategorije koju trebate.</p>
+            <span>Categories</span>
+            <h2>Popular jobs</h2>
+            <p>Here's the most popular categories</p>
           </header>
 
           <div class="category-grid">
-            <a href="resume-list.html">
-              <img src="assets/img/Konzervativa.png">
-              <h6>Konzervativa</h6>
-              <p>Estetski ispun prednjeg zuba, Liječenje kutnjaka, Kompozitni kolčić, Vađenje zuba...</p>
+            <a href="#">
+              <i class="fa fa-laptop"></i>
+              <h6>Technology</h6>
+              <p>Designer, Developer, IT Service, Front-end developer, Project management</p>
             </a>
 
-            <a href="resume-list.html">
-              <img src="assets/img/Protetika.png">
-              <h6>Protetika</h6>
-              <p>Privremena krunica, Ljuskice-veneers, Reparatura proteze, Sportske udlage...</p>
+            <a href="#">
+              <i class="fa fa-line-chart"></i>
+              <h6>Accounting</h6>
+              <p>Finance, Tax service, Payroll manager, Book keeper, Human resource</p>
             </a>
 
-            <a href="resume-list.html">
-             <img src="assets/img/Paradontologija.png">
-              <h6>Paradontologija</h6>
-              <p>Terapija gingivitisa, Operacija režnja, Produljenje kliničke krune zuba...</p>
+            <a href="#">
+              <i class="fa fa-medkit"></i>
+              <h6>Medical</h6>
+              <p>Doctor, Nurse, Hospotal, Dental service, Massagist</p>
             </a>
 
-            <a href="resume-list.html">
-             <img src="assets/img/Implantatologija.png">
-              <h6>Implantatologija</h6>
-              <p>Ugradnja implantata (mini, Mis, Nobel Biocare, Straumann), Locator nadogradnja...</p>
+            <a href="#">
+              <i class="fa fa-cutlery"></i>
+              <h6>Food</h6>
+              <p>Restaurant, Food service, Coffe shop, Cashier, Waitress</p>
             </a>
 
-            <a href="resume-list.html">
-             <img src="assets/img/Kirurgija.png">
-              <h6>Kirurgija</h6>
-              <p>Cirkumcizija, Vađenje impact. zuba, Apicotomija, Sinus lift, Alveotomija...</p>
+            <a href="#">
+              <i class="fa fa-newspaper-o"></i>
+              <h6>Media</h6>
+              <p>Journalism, Newspaper, Reporter, Writer, Cameraman</p>
             </a>
 
-            <a href="resume-list.html">
-              <img src="assets/img/Ortodoncija.png">
-              <h6>Ortodoncija</h6>
-              <p>Pregled ortodonta i mišljenje, Retencijska udlaga, Lingvalna trajna fiksacija...</p>
+            <a href="#">
+              <i class="fa fa-institution"></i>
+              <h6>Government</h6>
+              <p>Federal, Law, Human resource, Manager, Biologist</p>
             </a> 
           </div>
+
+          <p class="text-center"><a class="btn btn-info" href="">Browse all categories</a></p>
+
         </div>
       </section>
       <!-- END Categories -->
 
 
+
+      <!-- Pricing -->
+      <section>
+        <div class="container">
+          <header class="section-header">
+            <span>Plans</span>
+            <h2>Pricing</h2>
+            <p>Choose a plan that fits your needs</p>
+          </header>
+
+          <ul class="pricing">
+            <li>
+              <h6>Basic Package</h6>
+              <div class="price">
+                <sup>$</sup>0
+                <span>&nbsp;</span>
+              </div>
+              <hr>
+              <p><strong>1</strong> job posting</p>
+              <p><strong>No</strong> featured job</p>
+              <p><strong>5 days</strong> listing duration</p>
+              <br>
+              <a class="btn btn-primary btn-block" href="#">Select plan</a>
+            </li>
+
+            <li>
+              <h6>Medium Package</h6>
+              <div class="price">
+                <sup>$</sup>5<sup>.99</sup>
+                <span>per month</span>
+              </div>
+              <hr>
+              <p><strong>5</strong> job posting</p>
+              <p><strong>1</strong> featured job</p>
+              <p><strong>30 days</strong> listing duration</p>
+              <br>
+              <a class="btn btn-primary btn-block" href="#">Select plan</a>
+            </li>
+
+            <li>
+              <h6>Big Package</h6>
+              <div class="price">
+                <sup>$</sup>15<sup>.99</sup>
+                <span>per month</span>
+              </div>
+              <hr>
+              <p><strong>20</strong> job posting</p>
+              <p><strong>5</strong> featured job</p>
+              <p><strong>75 days</strong> listing duration</p>
+              <br>
+              <a class="btn btn-primary btn-block" href="#">Select plan</a>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+      <!-- END Pricing -->
+
+
       <!-- Newsletter -->
       <section class="bg-img text-center" style="background-image: url(assets/img/bg-facts.jpg)">
         <div class="container">
-          <h2><strong>Pretplati se</strong></h2>
-          <h6 class="font-alt">Primaj novosti s denta finder stranice na svoj email</h6>
+          <h2><strong>Subscribe</strong></h2>
+          <h6 class="font-alt">Get weekly top new jobs delivered to your inbox</h6>
           <br><br>
           <form class="form-subscribe" action="#">
             <div class="input-group">
-              <input type="text" class="form-control input-lg" placeholder="Vaša email adresa">
+              <input type="text" class="form-control input-lg" placeholder="Your eamil address">
               <span class="input-group-btn">
-                <button class="btn btn-success btn-lg" type="submit">Pretplati se</button>
+                <button class="btn btn-success btn-lg" type="submit">Subscribe</button>
               </span>
             </div>
           </form>
