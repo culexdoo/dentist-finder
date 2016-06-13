@@ -33,7 +33,47 @@ class BlogController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		/*
+
+		$user = User::getUserInfos(Auth::user()->id); 
+
+		if ($user['status'] == 0)
+		{
+			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+		}
+ 
+		// - AUTHORITY CHECK STARTS HERE - //
+		$hasAuthority = false;
+
+		switch ($user['user']->user_group)
+		{ 
+			case 'admin':
+			// Admins should also have authority
+			$hasAuthority = true;
+			break; 
+
+			default:
+			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+
+		if ($hasAuthority == false) 
+		{
+			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+		// - AUTHORITY CHECK ENDS HERE - //
+
+		*/
+		$this->layout->title = 'Blog | Dentist finder';
+
+		$this->layout->css_files = array(
+
+		);
+
+		$this->layout->js_footer_files = array(
+			'js/backend/datatables.js',
+		);
+
+		$this->layout->content = View::make('backend.blog.index');
 	}
 
 
@@ -44,7 +84,47 @@ class BlogController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		/*
+
+		$user = User::getUserInfos(Auth::user()->id); 
+
+		if ($user['status'] == 0)
+		{
+			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+		}
+ 
+		// - AUTHORITY CHECK STARTS HERE - //
+		$hasAuthority = false;
+
+		switch ($user['user']->user_group)
+		{ 
+			case 'admin':
+			// Admins should also have authority
+			$hasAuthority = true;
+			break; 
+
+			default:
+			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+
+		if ($hasAuthority == false) 
+		{
+			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+		// - AUTHORITY CHECK ENDS HERE - //
+
+		*/
+		$this->layout->title = 'Blog | Dentist finder';
+
+		$this->layout->css_files = array(
+
+		);
+
+		$this->layout->js_footer_files = array(
+			'js/backend/datatables.js',
+		);
+
+		$this->layout->content = View::make('backend.blog.create');
 	}
 
 
@@ -67,7 +147,47 @@ class BlogController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		/*
+
+		$user = User::getUserInfos(Auth::user()->id); 
+
+		if ($user['status'] == 0)
+		{
+			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+		}
+ 
+		// - AUTHORITY CHECK STARTS HERE - //
+		$hasAuthority = false;
+
+		switch ($user['user']->user_group)
+		{ 
+			case 'admin':
+			// Admins should also have authority
+			$hasAuthority = true;
+			break; 
+
+			default:
+			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+
+		if ($hasAuthority == false) 
+		{
+			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+		// - AUTHORITY CHECK ENDS HERE - //
+
+		*/
+		$this->layout->title = 'Blog | Dentist finder';
+
+		$this->layout->css_files = array(
+
+		);
+
+		$this->layout->js_footer_files = array(
+			'js/backend/datatables.js',
+		);
+
+		$this->layout->content = View::make('backend.blog.view');
 	}
 
 
@@ -79,7 +199,47 @@ class BlogController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		/*
+
+		$user = User::getUserInfos(Auth::user()->id); 
+
+		if ($user['status'] == 0)
+		{
+			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+		}
+ 
+		// - AUTHORITY CHECK STARTS HERE - //
+		$hasAuthority = false;
+
+		switch ($user['user']->user_group)
+		{ 
+			case 'admin':
+			// Admins should also have authority
+			$hasAuthority = true;
+			break; 
+
+			default:
+			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+
+		if ($hasAuthority == false) 
+		{
+			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+		// - AUTHORITY CHECK ENDS HERE - //
+
+		*/
+		$this->layout->title = 'Blog | Dentist finder';
+
+		$this->layout->css_files = array(
+
+		);
+
+		$this->layout->js_footer_files = array(
+			'js/backend/datatables.js',
+		);
+
+		$this->layout->content = View::make('backend.blog.edit');
 	}
 
 
