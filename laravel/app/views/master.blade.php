@@ -143,7 +143,7 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="img/avatar2.png" class="img-circle" alt="Josip Čes" />
+                        {{ HTML::image('img/avatar2.png', 'Josip Čes', array('class' => 'img-circle')) }}  
                     </div>
                     <div class="pull-left info">
                         <p>Josip Čes</p>

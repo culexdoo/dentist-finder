@@ -114,14 +114,14 @@ class BlogController extends \BaseController {
 		// - AUTHORITY CHECK ENDS HERE - //
 
 		*/
-		$this->layout->title = 'Blog | Dentist finder';
+		$this->layout->title = 'Unos novog bloga | Dentist finder';
 
 		$this->layout->css_files = array(
 
 		);
 
 		$this->layout->js_footer_files = array(
-			'js/backend/datatables.js',
+			'js/backend/bootstrap-filestyle.min.js'
 		);
 
 		$this->layout->content = View::make('backend.blog.create');
@@ -184,7 +184,7 @@ class BlogController extends \BaseController {
 		);
 
 		$this->layout->js_footer_files = array(
-			'js/backend/datatables.js',
+			'js/backend/bootstrap-filestyle.min.js'
 		);
 
 		$this->layout->content = View::make('backend.blog.view');
@@ -229,14 +229,14 @@ class BlogController extends \BaseController {
 		// - AUTHORITY CHECK ENDS HERE - //
 
 		*/
-		$this->layout->title = 'Blog | Dentist finder';
+		$this->layout->title = 'Uređivanje bloga | Dentist finder';
 
 		$this->layout->css_files = array(
 
 		);
 
 		$this->layout->js_footer_files = array(
-			'js/backend/datatables.js',
+			'js/backend/bootstrap-filestyle.min.js'
 		);
 
 		$this->layout->content = View::make('backend.blog.edit');

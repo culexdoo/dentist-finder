@@ -4,7 +4,11 @@
 .mt30 {
     margin-top: 30px;
 }
-
+.panel-body {
+    margin-top: 20px;
+    background: #FAFAFA;
+    padding: 15px;
+}
 .panel-footer {
     margin-bottom: 10px;
 }
@@ -94,4 +98,16 @@ label.star:before {
 }
 .table>tbody>tr>td { 
     min-width: 60px;
+}
+.content {
+    min-height: 850px; 
+}
+
+.breadcrumb {
+    padding: 13px 15px; 
+}
+
+.blog-post-image {
+  width: 50px;
+  height: 50px;
 }
