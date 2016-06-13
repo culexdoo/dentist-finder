@@ -5487,3 +5487,7 @@ Stack trace:
 #11 C:\Users\Nikola\Documents\GitHub\dentist-finder\laravel\public_html\index.php(49): Illuminate\Foundation\Application->run()
 #12 C:\Users\Nikola\Documents\GitHub\dentist-finder\laravel\server.php(19): require_once('C:\\Users\\Nikola...')
 #13 {main} [] []
+[2016-06-14 00:27:47] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Access to undeclared static property: Blog::$new_entry_rules' in C:\Users\Nikola\Documents\GitHub\dentist-finder\laravel\app\controllers\BlogController.php:140
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

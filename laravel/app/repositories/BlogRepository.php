@@ -21,9 +21,21 @@ class BlogRepository {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store($title)
 	{
-		//
+		try {
+
+			$entry = new Blog;
+			$entry->title = $title;
+			$entry->save();
+
+			return array('status' => 1);
+		}
+
+		catch (Exception $exp)
+		{
+			return array('status' => 0, 'reason' => $exp->getMessage());
+		}
 	}
  
 	/**

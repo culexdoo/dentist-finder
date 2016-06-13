@@ -13,10 +13,12 @@
 </div>
 <div class="panel-body">
 	<div class="row">
+		{{ Form::open(array('route' => $postRoute, 'role' => 'form', 'class' => 'form-horizontal', 'autocomplete' => 'off', 'files' => true)) }}
 	    <div class="col-md-8">
-	            <div class="form-group">
-	                <label for="title">Naslov</label>
-	                <input type="text" class="form-control" id="title" value="Naslov posta">
+	            <div class="form-group">  
+	                <label for="title">Naslov:</label>  
+					{{ Form::text('title', isset($entry->title) ? $entry->title : null, ['class' => 'form-control', 'placeholder' => 'Naslov posta']) }}
+					<small class="text-danger">{{ $errors->first('title') }}</small>
 	            </div> 
 	            <div class="form-group">
 	                <label for="short-description">Kratki opis</label>
@@ -30,11 +32,12 @@
 	                    <textarea style="width:100%; min-height: 150px; border: 1px solid #CCC; border-radius: 5px;"> </textarea>
 	                </div>
 	            </div> 
-	            <button type="submit" class="btn btn-info">Objavi</button>
+	            {{ Form::button('<span class="icon icon-done"></span> ' . Lang::get('core.save'), array('type' => 'submit', 'class' => 'btn btn-info')) }}
+	            
 	    </div>
 	    <div class="col-md-4"> 
 	       <div class="form-group">
-	            <label class="col-md-12 control-label" for="status">Status</label>
+	            <label class="col-md-12" for="status">Status</label>
 	            <div class="col-md-12">
 	                <div class="radio">
 	                    <label>
@@ -49,7 +52,7 @@
 	            </div>
 	        </div>
 	        <div class="form-group"> 
-	        	<label class="col-md-12 control-label" for="status">Istaknuta slika</label>
+	        	<label class="col-md-12" for="status">Istaknuta slika</label>
 	            <div class="col-md-12">
 	                <div class="input-profile-picture">
 	                    <input type="file" class="filestyle" data-input="false">
@@ -57,6 +60,7 @@
                 </div>
 	        </div>
 	    </div>
+	    {{ Form::close() }}
     </div>
 </div>
 

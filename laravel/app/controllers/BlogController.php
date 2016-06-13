@@ -124,7 +124,7 @@ class BlogController extends \BaseController {
 			'js/backend/bootstrap-filestyle.min.js'
 		);
 
-		$this->layout->content = View::make('backend.blog.create');
+		$this->layout->content = View::make('backend.blog.create', array('postRoute' => 'BlogStore'));
 	}
 
 
@@ -135,7 +135,27 @@ class BlogController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		Input::merge(array_map('trim', Input::all()));
+
+		$entryValidator = Validator::make(Input::all(), Blog::$create_rules);
+
+		if ($entryValidator->fails())
+		{
+			return Redirect::back()->with('error_message', Lang::get('core.msg_error_validating_entry'))->withErrors($entryValidator)->withInput();
+		}
+
+		$store = $this->repo->store(
+			Input::get('title')
+		);
+
+		if ($store['status'] == 0)
+		{
+			return Redirect::back()->with('error_message', Lang::get('core.msg_error_adding_entry'))->withErrors($entryValidator)->withInput();
+		}
+		else
+		{
+			return Redirect::route('BlogIndex')->with('success_message', Lang::get('core.msg_success_entry_added', array('name' => Input::get('name'))));
+		}
 	}
 
 
