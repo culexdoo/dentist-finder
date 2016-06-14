@@ -11,8 +11,8 @@
 return array(
 
 	// Main translates
-	'app_title'			=>	'Mrkva+',
+	'app_title'			=>	'Dentist finder',
 	'submit'			=>	'Pošalji',
-	'save'				=>	'Sačuvaj'
+	'save'				=>	'Spremi'
 
 );

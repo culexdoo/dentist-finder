@@ -9,8 +9,6 @@
  */
 
 return array(
-
-	// Main translates
-	'cityhub'			=>	'CityHub',
+ 
 
 );

@@ -54,9 +54,14 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
  
 	{{-- Load the Modernizr before everything, for feature detection --}}
 	{{ HTML::script('js/backend/modernizr.js') }}
+
+	<!-- select2 4.0.3 --> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
     <!-- bootstrap 3.0.2 --> 
 	
@@ -179,6 +184,11 @@
                     <li>
                         <a href="{{ URL::route('ReviewIndex') }}">
                             <i class="fa fa-comment"></i> <span>Recenzije</span>
+                        </a>
+                    </li>
+                 	<li>
+                        <a href="{{ URL::route('SignOut') }}">
+                            <i class="fa fa-sign-out"></i> <span>Odjava</span>
                         </a>
                     </li>
                 </ul>

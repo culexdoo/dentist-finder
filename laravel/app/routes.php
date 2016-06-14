@@ -18,10 +18,21 @@ Route::get('/updateapp', function()
 
 
 
+
+// Sign in page for admin
+
+Route::get('admin-sign-in', array('before' => 'guest', 'as' => 'AdminSignIn', 'uses' => 'CoreController@adminsignin'));
+
+// Sign in processing --- 'before' => 'guest|csrf', 
+Route::post('admin-sign-me-in', array('before' => 'guest', 'as' => 'AdminLogIn', 'uses' => 'CoreController@adminlogin'));
+
+// Sign out
+Route::get('sign-out', array('before' => 'auth', 'as' => 'SignOut', 'uses' => 'CoreController@signout'));
+
  /* 	 
  * 	Backend routes
  */
-Route::group(array('prefix' => 'admin'), function()
+Route::group(array('before' => 'auth', 'prefix' => 'admin'), function()
 {
 
 	/*
@@ -31,7 +42,7 @@ Route::group(array('prefix' => 'admin'), function()
 	 *	- Controller handles the type and file loading depending on user role
 	 */ 
 
-	Route::get('/', array('before' => 'guest', 'as' => 'getDashboard', 'uses' => 'DashboardController@index'));
+	Route::get('/', array('as' => 'getDashboard', 'uses' => 'DashboardController@index'));
  
 	// Dentist accounts, create, save, edit, update, destroy
 	Route::group(array('prefix' => 'dentist'), function()
@@ -44,7 +55,7 @@ Route::group(array('prefix' => 'admin'), function()
 
 		Route::get('edit/{id}', array('as' => 'DentistEdit', 'uses' => 'DentistController@edit'));
 
-		Route::post('update', array('as' => 'DentistUpdate', 'uses' => 'DentistController@update'));
+		Route::post('update/{id}', array('as' => 'DentistUpdate', 'uses' => 'DentistController@update'));
 
 		Route::get('destroy/{id}', array('as' => 'DentistDestroy', 'uses' => 'DentistController@destroy'));
 
@@ -61,7 +72,7 @@ Route::group(array('prefix' => 'admin'), function()
 
 		Route::get('edit/{id}', array('as' => 'PatientEdit', 'uses' => 'PatientController@edit'));
 
-		Route::post('update', array('as' => 'PatientUpdate', 'uses' => 'PatientController@update'));
+		Route::post('update/{id}', array('as' => 'PatientUpdate', 'uses' => 'PatientController@update'));
 
 		Route::get('destroy/{id}', array('as' => 'PatientDestroy', 'uses' => 'PatientController@destroy'));
 
@@ -78,7 +89,7 @@ Route::group(array('prefix' => 'admin'), function()
 
 		Route::get('edit/{id}', array('as' => 'BlogEdit', 'uses' => 'BlogController@edit'));
 
-		Route::post('update', array('as' => 'BlogUpdate', 'uses' => 'BlogController@update'));
+		Route::post('update/{id}', array('as' => 'BlogUpdate', 'uses' => 'BlogController@update'));
 
 		Route::get('destroy/{id}', array('as' => 'BlogDestroy', 'uses' => 'BlogController@destroy'));
 
@@ -95,7 +106,7 @@ Route::group(array('prefix' => 'admin'), function()
 
 		Route::get('edit/{id}', array('as' => 'QuoteEdit', 'uses' => 'QuoteController@edit'));
 
-		Route::post('update', array('as' => 'QuoteUpdate', 'uses' => 'QuoteController@update'));
+		Route::post('update/{id}', array('as' => 'QuoteUpdate', 'uses' => 'QuoteController@update'));
 
 		Route::get('destroy/{id}', array('as' => 'QuoteDestroy', 'uses' => 'QuoteController@destroy'));
 
@@ -112,7 +123,7 @@ Route::group(array('prefix' => 'admin'), function()
 
 		Route::get('edit/{id}', array('as' => 'ReviewEdit', 'uses' => 'ReviewController@edit'));
 
-		Route::post('update', array('as' => 'ReviewUpdate', 'uses' => 'ReviewController@update'));
+		Route::post('update/{id}', array('as' => 'ReviewUpdate', 'uses' => 'ReviewController@update'));
 
 		Route::get('destroy/{id}', array('as' => 'ReviewDestroy', 'uses' => 'ReviewController@destroy'));
 
@@ -121,14 +132,13 @@ Route::group(array('prefix' => 'admin'), function()
 });
 
 
-
 /*
  *	 Frontend routes
  */
 
  
 // Home / landing
-Route::get('/', array('as' => 'getFrontendLanding', 'uses' => 'FrontendController@getLanding')); 
+Route::get('/', array('as' => 'getHome', 'uses' => 'FrontendController@getLanding')); 
 
 // Sign in page
 Route::get('sign-in', array('before' => 'guest', 'as' => 'getSignIn', 'uses' => 'FrontendController@getSignIn'));
@@ -150,9 +160,6 @@ Route::get('change-language/{id}', array('as' => 'changeLang', 'uses' => 'CoreCo
 
 // Change language route (with redirect back())
 Route::get('switch-language/{id}', array('as' => 'switchLang', 'uses' => 'CoreController@getSwitchLanguage'));
-
-// Sign out
-Route::get('sign-out', array('before' => 'auth', 'as' => 'getSignOut', 'uses' => 'CoreController@getSignOut'));
 
 // Update password when creating new user via social networks
 Route::get('set-password', array('before' => 'auth', 'as' => 'getUpdatePassword', 'uses' => 'CoreController@getUpdatePassword'));

@@ -33,13 +33,12 @@ class BlogController extends \BaseController {
 	 */
 	public function index()
 	{
-		/*
-
+		// - CHECK IF USER IS LOGGED IN - // 
 		$user = User::getUserInfos(Auth::user()->id); 
 
 		if ($user['status'] == 0)
 		{
-			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
 		}
  
 		// - AUTHORITY CHECK STARTS HERE - //
@@ -48,21 +47,29 @@ class BlogController extends \BaseController {
 		switch ($user['user']->user_group)
 		{ 
 			case 'admin':
-			// Admins should also have authority
+			// Admins should have authority
 			$hasAuthority = true;
 			break; 
 
 			default:
-			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 
 		if ($hasAuthority == false) 
 		{
-			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 		// - AUTHORITY CHECK ENDS HERE - //
 
-		*/
+		// Get data
+
+		$entries = Blog::getEntries(null, null);
+
+		if ($entries['status'] == 0)
+		{
+			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.msg_error_getting_entry'));
+		} 
+
 		$this->layout->title = 'Blog | Dentist finder';
 
 		$this->layout->css_files = array(
@@ -71,9 +78,9 @@ class BlogController extends \BaseController {
 
 		$this->layout->js_footer_files = array(
 			'js/backend/datatables.js',
-		);
+		); 
 
-		$this->layout->content = View::make('backend.blog.index');
+		$this->layout->content = View::make('backend.blog.index', array('entries' => $entries));
 	}
 
 
@@ -84,13 +91,12 @@ class BlogController extends \BaseController {
 	 */
 	public function create()
 	{
-		/*
-
+		// - CHECK IF USER IS LOGGED IN - // 
 		$user = User::getUserInfos(Auth::user()->id); 
 
 		if ($user['status'] == 0)
 		{
-			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
 		}
  
 		// - AUTHORITY CHECK STARTS HERE - //
@@ -99,29 +105,32 @@ class BlogController extends \BaseController {
 		switch ($user['user']->user_group)
 		{ 
 			case 'admin':
-			// Admins should also have authority
+			// Admins should have authority
 			$hasAuthority = true;
 			break; 
 
 			default:
-			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 
 		if ($hasAuthority == false) 
 		{
-			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 		// - AUTHORITY CHECK ENDS HERE - //
 
-		*/
+	 
 		$this->layout->title = 'Unos novog bloga | Dentist finder';
 
 		$this->layout->css_files = array(
-
+			'css/backend/summernote.css'			
 		);
 
 		$this->layout->js_footer_files = array(
-			'js/backend/bootstrap-filestyle.min.js'
+			'js/backend/bootstrap-filestyle.min.js',
+			'js/backend/summernote.js',
+			'js/backend/jquery.stringtoslug.min.js',
+			'js/backend/speakingurl.min.js'
 		);
 
 		$this->layout->content = View::make('backend.blog.create', array('postRoute' => 'BlogStore'));
@@ -137,7 +146,7 @@ class BlogController extends \BaseController {
 	{
 		Input::merge(array_map('trim', Input::all()));
 
-		$entryValidator = Validator::make(Input::all(), Blog::$create_rules);
+		$entryValidator = Validator::make(Input::all(), Blog::$store_rules);
 
 		if ($entryValidator->fails())
 		{
@@ -145,7 +154,12 @@ class BlogController extends \BaseController {
 		}
 
 		$store = $this->repo->store(
-			Input::get('title')
+			Input::get('title'),
+			Input::get('permalink'),
+			Input::get('intro'),
+			Input::get('content'),
+			Input::get('status'),
+			Input::file('image')
 		);
 
 		if ($store['status'] == 0)
@@ -167,13 +181,12 @@ class BlogController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		/*
-
+		// - CHECK IF USER IS LOGGED IN - // 
 		$user = User::getUserInfos(Auth::user()->id); 
 
 		if ($user['status'] == 0)
 		{
-			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
 		}
  
 		// - AUTHORITY CHECK STARTS HERE - //
@@ -182,21 +195,21 @@ class BlogController extends \BaseController {
 		switch ($user['user']->user_group)
 		{ 
 			case 'admin':
-			// Admins should also have authority
+			// Admins should have authority
 			$hasAuthority = true;
 			break; 
 
 			default:
-			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 
 		if ($hasAuthority == false) 
 		{
-			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 		// - AUTHORITY CHECK ENDS HERE - //
 
-		*/
+
 		$this->layout->title = 'Blog | Dentist finder';
 
 		$this->layout->css_files = array(
@@ -219,13 +232,12 @@ class BlogController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		/*
-
+		// - CHECK IF USER IS LOGGED IN - // 
 		$user = User::getUserInfos(Auth::user()->id); 
 
 		if ($user['status'] == 0)
 		{
-			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
 		}
  
 		// - AUTHORITY CHECK STARTS HERE - //
@@ -234,32 +246,44 @@ class BlogController extends \BaseController {
 		switch ($user['user']->user_group)
 		{ 
 			case 'admin':
-			// Admins should also have authority
+			// Admins should have authority
 			$hasAuthority = true;
 			break; 
 
 			default:
-			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 
 		if ($hasAuthority == false) 
 		{
-			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 		// - AUTHORITY CHECK ENDS HERE - //
 
-		*/
+		// Get data
+
+		$entry = Blog::getEntries($id, null); 
+
+
+		if ($entry['status'] == 0)
+		{
+			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.msg_error_getting_entry'));
+		}  
+
 		$this->layout->title = 'Uređivanje bloga | Dentist finder';
 
 		$this->layout->css_files = array(
-
+			'css/backend/summernote.css'			
 		);
 
 		$this->layout->js_footer_files = array(
-			'js/backend/bootstrap-filestyle.min.js'
+			'js/backend/bootstrap-filestyle.min.js',
+			'js/backend/summernote.js',
+			'js/backend/jquery.stringtoslug.min.js',
+			'js/backend/speakingurl.min.js'
 		);
 
-		$this->layout->content = View::make('backend.blog.edit');
+		$this->layout->content = View::make('backend.blog.edit', array('entry' => $entry['entry'], 'postRoute' => 'BlogUpdate'));
 	}
 
 
@@ -271,7 +295,33 @@ class BlogController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		Input::merge(array_map('trim', Input::all()));
+
+		$entryValidator = Validator::make(Input::all(), Blog::$update_rules);
+
+		if ($entryValidator->fails())
+		{
+			return Redirect::back()->with('error_message', Lang::get('core.msg_error_validating_entry'))->withErrors($entryValidator)->withInput();
+		}
+
+		$update = $this->repo->update(
+		    Input::get('id'),
+			Input::get('title'),			
+			Input::get('permalink'),
+			Input::get('intro'),
+			Input::get('content'),
+			Input::get('status'),
+			Input::file('image')
+		);
+
+		if ($update['status'] == 0)
+		{
+			return Redirect::back()->with('error_message', Lang::get('core.msg_error_adding_entry'))->withErrors($entryValidator)->withInput();
+		}
+		else
+		{
+			return Redirect::route('BlogIndex')->with('success_message', Lang::get('core.msg_success_entry_edited', array('name' => Input::get('name'))));
+		}
 	}
 
 
@@ -283,7 +333,61 @@ class BlogController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		// - CHECK IF USER IS LOGGED IN - // 
+		$user = User::getUserInfos(Auth::user()->id); 
+
+		if ($user['status'] == 0)
+		{
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+		}
+ 
+		// - AUTHORITY CHECK STARTS HERE - //
+		$hasAuthority = false;
+
+		switch ($user['user']->user_group)
+		{ 
+			case 'admin':
+			// Admins should have authority
+			$hasAuthority = true;
+			break; 
+
+			default:
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+
+		if ($hasAuthority == false) 
+		{
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
+		}
+		// - AUTHORITY CHECK ENDS HERE - //
+
+		if ($id == null)
+		{
+			return Redirect::route('BlogIndex')->with('error_message', Lang::get('core.msg_error_getting_entry'));
+		}
+
+		$entry = Blog::getEntries($id, null);
+
+		if ($entry['status'] == 0)
+		{
+			return Redirect::back()->with('error_message', Lang::get('core.msg_error_getting_entry'));
+		}
+
+		if (!is_object($entry['entry']))
+		{
+			return Redirect::route('BlogIndex')->with('error_message', Lang::get('core.msg_error_getting_entry'));
+		}
+  
+		$destroy = $this->repo->destroy($id);
+
+		if ($destroy['status'] == 1)
+		{
+			return Redirect::route('BlogIndex')->with('success_message', Lang::get('core.msg_success_entry_deleted'));
+		}
+		else
+		{
+			return Redirect::route('BlogIndex')->with('error_message', Lang::get('core.msg_error_deleting_entry'));
+		}
 	}
 
 

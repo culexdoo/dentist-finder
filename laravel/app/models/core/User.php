@@ -66,6 +66,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface
  					->select(
 						'users.id AS id',
 						'users.email AS email',
+						'users.user_group AS user_group',
 						'users.first_name AS first_name',
 						'users.last_name AS last_name'
 						)

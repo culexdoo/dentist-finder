@@ -11,13 +11,12 @@ class DashboardController extends \BaseController {
 	public function index()
 	{
 
-		/*
-
+		// - CHECK IF USER IS LOGGED IN - // 
 		$user = User::getUserInfos(Auth::user()->id); 
 
 		if ($user['status'] == 0)
 		{
-			return Redirect::route('getSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('messages.not_logged_in'));
 		}
  
 		// - AUTHORITY CHECK STARTS HERE - //
@@ -26,21 +25,20 @@ class DashboardController extends \BaseController {
 		switch ($user['user']->user_group)
 		{ 
 			case 'admin':
-			// Admins should also have authority
+			// Admins should have authority
 			$hasAuthority = true;
 			break; 
 
 			default:
-			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 
 		if ($hasAuthority == false) 
 		{
-			return Redirect::route('regionLanding')->with('error_message', Lang::get('core.unauthorized_access'));
+			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 		// - AUTHORITY CHECK ENDS HERE - //
-
-		*/
+		
 		$this->layout->title = 'Admin | Dentist finder';
 
 		$this->layout->css_files = array(

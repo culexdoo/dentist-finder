@@ -57,5 +57,69 @@ class CoreController extends BaseController
 		$this->layout->content = View::make('core.examplepage');
 
 	}
+
+	public function adminsignin() {
+
+		$this->layout->description = 'Dentist finder je aplikacija za povezivanje pacijenata i zubara';
+
+		$this->layout->keywords = 'Dentist finder, dentist, zubari, pacijenti, pregled zuba';
+
+		$this->layout->bodyclass = 'login-page';
+
+		$this->layout->title = 'Prijava | Dentist finder';
+
+		$this->layout->css_files = array( 
+		);
+
+		$this->layout->js_footer_files = array( 
+		); 
+
+		$this->layout->content = View::make('frontend.adminsignin', array('postRoute' => 'AdminLogIn'));
+	}
+
+
+
+	// Post sign in
+	public function adminlogin()
+	{
+		Input::merge(array_map('trim', Input::all()));
+
+		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password'))))
+		{
+			$user_language = 'en';
+
+			Session::put('lang', $user_language);
+
+			App::setLocale($user_language);
+
+			return Redirect::route('getDashboard')->with('success_message', Lang::get('messages.sign_in_success'));
+
+		}
+		else
+		{
+			return Redirect::back()->with('error_message', Lang::get('messages.sign_in_error'))->withInput();
+		}
+	}
+
+
+	// Do the sign out
+	public function signout()
+	{
+		if (Auth::check())
+		{
+			Auth::logout();
+			Session::flush();
+
+			return Redirect::route('getHome')->with('info_message', Lang::get('messages.sign_out_success'));
+
+		}
+
+		else
+		{
+			return Redirect::route('getSignIn')->with('info_message', Lang::get('messages.sign_out_resign'));
+		}
+
+	}
+
   
 }

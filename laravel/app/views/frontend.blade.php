@@ -33,9 +33,31 @@
 
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
-    <meta name="description" content="Dentist finder">
+    <?php
+		if (isset($description))
+		{
+			$final_description = $description;
+		}
+		else
+		{
+			$final_description = Lang::get('core.app_description');
+		}
+	?>
 
-    <meta name="keywords" content="dentist, dentist finder">
+    <meta name="description" content="{{ $final_description }}">
+
+    <?php
+		if (isset($keywords))
+		{
+			$final_keywords = $keywords;
+		}
+		else
+		{
+			$final_keywords = Lang::get('core.app_keywords');
+		}
+	?>
+
+    <meta name="keywords" content="{{ $final_keywords }}">
 
  	<meta name="author" content="Culex d.o.o., info@culex.hr">
 
@@ -48,40 +70,16 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ URL::asset('favicon.png') }}">
 
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ URL::asset('favicon.png') }}">
-
-    <!-- jQuery 2.0.2 -->
-	{{ HTML::script('js/backend/jquery.min.js') }}
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
  
-	{{-- Load the Modernizr before everything, for feature detection --}}
-	{{ HTML::script('js/backend/modernizr.js') }}
-
-    <!-- bootstrap 3.0.2 --> 
+    <!-- Styles --> 
 	
-	{{ HTML::style('css/backend/bootstrap.min.css') }}
+	{{ HTML::style('css/frontend/app.min.css') }} 
+	{{ HTML::style('css/frontend/custom.css') }}
+
+    <!-- Fonts -->
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
    
-    <!-- font Awesome -->
-
-	{{ HTML::style('css/backend/font-awesome.min.css') }}
-
-    <!-- Ionicons -->
-
-	{{ HTML::style('css/backend/ionicons.min.css') }}
-
-    <!-- google font -->
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
-    <!-- Theme style -->
-	
-	{{ HTML::style('css/backend/style.css') }}
-
-    <!-- Custom style -->
-
-	{{ HTML::style('css/backend/custom.css') }}
-
-
 	{{-- Loop that implements additional CSS for a module and/or view --}}
 	@if (isset($css_files) && is_array($css_files))
 		@foreach  ($css_files as $css_file)
@@ -96,8 +94,7 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
-	{{ HTML::script('js/backend/jquery.noty.packaged.min.js') }}
-	{{ HTML::script('js/backend/noty.app.theme.js') }}
+
 
 
 	{{-- Loads default path to a JS variable (no trailing slash) --}}
@@ -115,119 +112,40 @@
 
 </head>
 
-<body class="skin-black">
-    <!-- header logo: style can be found in header.less -->
-    <header class="header">
-        <a href="{{ URL::route('getDashboard') }}" class="logo">
-            <!-- Add the class icon to your logo image or logo icon to add the margining -->
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <div class="navbar-right">
-            
-            </div>
-        </nav>
-    </header>
-    <div class="wrapper row-offcanvas row-offcanvas-left">
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="left-side sidebar-offcanvas">
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-                <!-- Sidebar user panel -->
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="img/avatar2.png" class="img-circle" alt="Josip Čes" />
-                    </div>
-                    <div class="pull-left info">
-                        <p>Josip Čes</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>
-                </div>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="{{ URL::route('getDashboard') }}">
-                            <i class="fa fa-dashboard"></i> <span>Početna</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::route('DentistIndex') }}">
-                            <i class="fa fa-male"></i> <span>Zubari</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::route('PatientIndex') }}">
-                            <i class="fa fa-user"></i> <span>Pacijenti</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::route('BlogIndex') }}">
-                            <i class="fa fa-book"></i> <span>Blog</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::route('QuoteIndex') }}">
-                            <i class="fa fa-asterisk"></i> <span>Upiti</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::route('ReviewIndex') }}">
-                            <i class="fa fa-comment"></i> <span>Recenzije</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!-- /.sidebar -->
-        </aside>
-        <!-- Right side column. Contains the navbar and content of the page -->
-        <aside class="right-side">
-            <!-- Main content -->
-            <section class="content">
+    <?php
+		if (isset($bodyclass))
+		{
+			$final_bodyclass = $bodyclass;
+		}
+		else
+		{
+			$final_bodyclass = 'nav-on-header';
+		}
+	?>
+ 
 
-	          	<!-- Your Page Content Here -->
-			
-					{{ $content or null }}
+<body class="{{ $final_bodyclass }}">
+    
+
+
+
+		{{ $content or null }}
 		
- 				<!-- End page content  -->
-
-            </section>
-            <!-- /.content --> 
-
-        </aside>
-        <!-- /.right-side -->
-
-       	<footer>
-	      	<div class="row">
-	            <div class="footer-main">
-	                Copyright &copy dentist-finder, 2016 | Developed by <a href="http://culex.hr/" target="_blank">Culex</a>
-	            </div>
-	        </div>
-		</footer>
-
-    </div>
-
-    <!-- ./wrapper -->
+   
 
 
 
 
 
-    <!-- Le javascript
-    ================================================== --> 
 
 
  	<!-- App js -->
 
- 	{{ HTML::script('js/backend/app.js') }}
-
-
-
+ 	{{ HTML::script('js/frontend/app.min.js') }}
+ 	{{ HTML::script('js/frontend/custom.js') }}
+	{{ HTML::script('js/backend/jquery.noty.packaged.min.js') }}
+	{{ HTML::script('js/backend/noty.app.theme.js') }}
+	
 	@if (Session::has('message'))
 	<script>
 	var n = noty({
