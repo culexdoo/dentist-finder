@@ -1,14 +1,14 @@
 <?php 
 
 /*
-*	DentistRepository 
+*	ReviewRepository 
 *
 *	Handles backend functions
 */
 
 
 
-class DentistRepository {
+class ReviewRepository {
  
     public function __construct(){
 
@@ -17,7 +17,7 @@ class DentistRepository {
  
 
 	/**
-	 * Store a newly created dentist(s) in storage.
+	 * Store a newly created review(s) in storage.
 	 *
 	 * @return Response
 	 */
@@ -25,7 +25,7 @@ class DentistRepository {
 	{ 
 		try {
  
-			$entry = new Dentist;
+			$entry = new Review;
 			$entry->title 	= $title;
 			$entry->permalink = $permalink;
 			$entry->intro 	= $intro;
@@ -35,8 +35,8 @@ class DentistRepository {
 			if ($image != null)
 			{
 				// Image data
-				$largeImagePath = public_path() . "/uploads/frontend/dentist/";
-				$thumbImagePath = public_path() . "/uploads/frontend/dentist/thumbs/";
+				$largeImagePath = public_path() . "/uploads/frontend/review/";
+				$thumbImagePath = public_path() . "/uploads/frontend/review/thumbs/";
 
 				// Image name is the same in thumbs and full size image
 				$extension = $image->getClientOriginalExtension(); // getting image extension
@@ -69,7 +69,7 @@ class DentistRepository {
 	}
  
 	/**
-	 * Update the specified dentist(s) in storage.
+	 * Update the specified review(s) in storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -78,7 +78,7 @@ class DentistRepository {
 	{
     	try {
  
-			$entry = Dentist::find($id);
+			$entry = Review::find($id);
 			$entry->title 		= $title;
 			$entry->permalink 	= $permalink;
 			$entry->intro 		= $intro;
@@ -89,8 +89,8 @@ class DentistRepository {
 			if ($image != null)
 			{
 				// Image data
-				$largeImagePath = public_path() . "/uploads/frontend/dentist/";
-				$thumbImagePath = public_path() . "/uploads/frontend/dentist/thumbs/";
+				$largeImagePath = public_path() . "/uploads/frontend/review/";
+				$thumbImagePath = public_path() . "/uploads/frontend/review/thumbs/";
 
 				// Image name is the same in thumbs and full size image
 				$extension = $image->getClientOriginalExtension(); // getting image extension
@@ -107,8 +107,8 @@ class DentistRepository {
 
 				if ($uploadSuccess)
 				{
-					$largeOldImagePath = public_path() . "/uploads/frontend/dentist/" . $oldImage;
-					$thumbOldImagePath = public_path() . "/uploads/frontend/dentist/"  . $oldImage;
+					$largeOldImagePath = public_path() . "/uploads/frontend/review/" . $oldImage;
+					$thumbOldImagePath = public_path() . "/uploads/frontend/review/"  . $oldImage;
 
 					if (File::exists($largeOldImagePath))
 					{
@@ -136,7 +136,7 @@ class DentistRepository {
 
 
 	/**
-	 * Remove the specified dentist(s) from storage.
+	 * Remove the specified review(s) from storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -145,13 +145,13 @@ class DentistRepository {
 	{
 		try
 		{
-			$entry = Dentist::find($id);
+			$entry = Review::find($id);
 
 			$entry->delete();
 
-			$largeOldImagePath = public_path() . "/uploads/frontend/dentist/" . $entry->image;
+			$largeOldImagePath = public_path() . "/uploads/frontend/review/" . $entry->image;
 
-			$thumbOldImagePath = public_path() . "/uploads/frontend/dentist/thumbs/"  . $entry->image;
+			$thumbOldImagePath = public_path() . "/uploads/frontend/review/thumbs/"  . $entry->image;
 
 			if (File::exists($largeOldImagePath))
 			{

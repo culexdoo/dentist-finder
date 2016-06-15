@@ -20,7 +20,7 @@ class DentistController extends \BaseController {
 	}
 
 	/**
-	 * Display a listing of the blog post(s).
+	 * Display a listing of the dentist(s).
 	 *
 	 * @return Response
 	 */
@@ -73,12 +73,12 @@ class DentistController extends \BaseController {
 			'js/backend/datatables.js',
 		); 
 
-		$this->layout->content = View::make('backend.blog.index', array('entries' => $entries));
+		$this->layout->content = View::make('backend.dentist.index', array('entries' => $entries));
 	}
 
 
 	/**
-	 * Show the form for creating a new blog post(s).
+	 * Show the form for creating a new dentist(s).
 	 *
 	 * @return Response
 	 */
@@ -113,7 +113,7 @@ class DentistController extends \BaseController {
 		// - AUTHORITY CHECK ENDS HERE - //
 
 	 
-		$this->layout->title = 'Unos novog bloga | Dentist finder';
+		$this->layout->title = 'Unos novog zubara | Dentist finder';
 
 		$this->layout->css_files = array(
 			'css/backend/summernote.css'			
@@ -126,12 +126,12 @@ class DentistController extends \BaseController {
 			'js/backend/speakingurl.min.js'
 		);
 
-		$this->layout->content = View::make('backend.blog.create', array('postRoute' => 'BlogStore'));
+		$this->layout->content = View::make('backend.dentist.create', array('postRoute' => 'DentistStore'));
 	}
 
 
 	/**
-	 * Store a newly created blog post(s) in storage.
+	 * Store a newly created dentist(s) in storage.
 	 *
 	 * @return Response
 	 */
@@ -139,7 +139,7 @@ class DentistController extends \BaseController {
 	{
 		Input::merge(array_map('trim', Input::all()));
 
-		$entryValidator = Validator::make(Input::all(), Blog::$store_rules);
+		$entryValidator = Validator::make(Input::all(), Dentist::$store_rules);
 
 		if ($entryValidator->fails())
 		{
@@ -161,13 +161,13 @@ class DentistController extends \BaseController {
 		}
 		else
 		{
-			return Redirect::route('BlogIndex')->with('success_message', Lang::get('core.msg_success_entry_added', array('name' => Input::get('name'))));
+			return Redirect::route('DentistIndex')->with('success_message', Lang::get('core.msg_success_entry_added', array('name' => Input::get('name'))));
 		}
 	}
 
 
 	/**
-	 * Display the specified blog post(s).
+	 * Display the specified dentist(s).
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -203,7 +203,7 @@ class DentistController extends \BaseController {
 		// - AUTHORITY CHECK ENDS HERE - //
 
 
-		$this->layout->title = 'Blog | Dentist finder';
+		$this->layout->title = 'Zubar | Dentist finder';
 
 		$this->layout->css_files = array(
 
@@ -213,12 +213,12 @@ class DentistController extends \BaseController {
 			'js/backend/bootstrap-filestyle.min.js'
 		);
 
-		$this->layout->content = View::make('backend.blog.view');
+		$this->layout->content = View::make('backend.dentist.view');
 	}
 
 
 	/**
-	 * Show the form for editing the specified blog post(s).
+	 * Show the form for editing the specified dentist(s).
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -255,7 +255,7 @@ class DentistController extends \BaseController {
 
 		// Get data
 
-		$entry = Blog::getEntries($id, null); 
+		$entry = Dentist::getEntries($id, null); 
 
 
 		if ($entry['status'] == 0)
@@ -263,7 +263,7 @@ class DentistController extends \BaseController {
 			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.msg_error_getting_entry'));
 		}  
 
-		$this->layout->title = 'Uređivanje bloga | Dentist finder';
+		$this->layout->title = 'Uređivanje zubara | Dentist finder';
 
 		$this->layout->css_files = array(
 			'css/backend/summernote.css'			
@@ -276,12 +276,12 @@ class DentistController extends \BaseController {
 			'js/backend/speakingurl.min.js'
 		);
 
-		$this->layout->content = View::make('backend.blog.edit', array('entry' => $entry['entry'], 'postRoute' => 'BlogUpdate'));
+		$this->layout->content = View::make('backend.dentist.edit', array('entry' => $entry['entry'], 'postRoute' => 'DentistUpdate'));
 	}
 
 
 	/**
-	 * Update the specified blog post(s) in storage.
+	 * Update the specified dentist(s) in storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -290,7 +290,7 @@ class DentistController extends \BaseController {
 	{
 		Input::merge(array_map('trim', Input::all()));
 
-		$entryValidator = Validator::make(Input::all(), Blog::$update_rules);
+		$entryValidator = Validator::make(Input::all(), Dentist::$update_rules);
 
 		if ($entryValidator->fails())
 		{
@@ -313,13 +313,13 @@ class DentistController extends \BaseController {
 		}
 		else
 		{
-			return Redirect::route('BlogIndex')->with('success_message', Lang::get('core.msg_success_entry_edited', array('name' => Input::get('name'))));
+			return Redirect::route('DentistIndex')->with('success_message', Lang::get('core.msg_success_entry_edited', array('name' => Input::get('name'))));
 		}
 	}
 
 
 	/**
-	 * Remove the specified blog post(s) from storage.
+	 * Remove the specified dentist(s) from storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -356,10 +356,10 @@ class DentistController extends \BaseController {
 
 		if ($id == null)
 		{
-			return Redirect::route('BlogIndex')->with('error_message', Lang::get('core.msg_error_getting_entry'));
+			return Redirect::route('DentistIndex')->with('error_message', Lang::get('core.msg_error_getting_entry'));
 		}
 
-		$entry = Blog::getEntries($id, null);
+		$entry = Dentist::getEntries($id, null);
 
 		if ($entry['status'] == 0)
 		{
@@ -368,18 +368,18 @@ class DentistController extends \BaseController {
 
 		if (!is_object($entry['entry']))
 		{
-			return Redirect::route('BlogIndex')->with('error_message', Lang::get('core.msg_error_getting_entry'));
+			return Redirect::route('DentistIndex')->with('error_message', Lang::get('core.msg_error_getting_entry'));
 		}
   
 		$destroy = $this->repo->destroy($id);
 
 		if ($destroy['status'] == 1)
 		{
-			return Redirect::route('BlogIndex')->with('success_message', Lang::get('core.msg_success_entry_deleted'));
+			return Redirect::route('DentistIndex')->with('success_message', Lang::get('core.msg_success_entry_deleted'));
 		}
 		else
 		{
-			return Redirect::route('BlogIndex')->with('error_message', Lang::get('core.msg_error_deleting_entry'));
+			return Redirect::route('DentistIndex')->with('error_message', Lang::get('core.msg_error_deleting_entry'));
 		}
 	}
 
