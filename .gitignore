@@ -1,1 +1,7 @@
 laravel/.phpintel
+laravel/app/storage/cache
+laravel/app/storage/debugbar
+laravel/app/storage/logs
+laravel/app/storage/meta
+laravel/app/storage/sessions
+laravel/app/storage/views

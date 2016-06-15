@@ -56,14 +56,14 @@ class DentistController extends \BaseController {
 
 		// Get data
 
-		$entries = Blog::getEntries(null, null);
+		$entries = Dentist::getEntries(null, null);
 
 		if ($entries['status'] == 0)
 		{
 			return Redirect::route('getDashboard')->with('error_message', Lang::get('core.msg_error_getting_entry'));
 		} 
 
-		$this->layout->title = 'Blog | Dentist finder';
+		$this->layout->title = 'Dentist | Dentist finder';
 
 		$this->layout->css_files = array(
 
