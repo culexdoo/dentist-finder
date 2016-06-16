@@ -38,6 +38,13 @@ class DashboardController extends \BaseController {
 			return Redirect::route('AdminSignIn')->with('error_message', Lang::get('core.unauthorized_access'));
 		}
 		// - AUTHORITY CHECK ENDS HERE - //
+
+
+		// Get last 10 of each data
+		$dentistentries = Dentist::getEntries(null, 10);
+		$patiententries = Patient::getEntries(null, 10);
+		$quoteentries = Quote::getEntries(null, 10);
+		$reviewentries = Review::getEntries(null, 10);
 		
 		$this->layout->title = 'Admin | Dentist finder';
 
